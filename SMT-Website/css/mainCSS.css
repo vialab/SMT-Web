@@ -1,0 +1,324 @@
+body {
+	padding-top: 60px;
+	padding-bottom: 40px;
+}
+
+.sidebar-nav {
+	padding: 9px 0;
+}
+
+/* Start navigation header */
+@media (max-width: 980px) {
+	/* Enable use of floated navbar text */
+	.navbar-text.pull-right {
+		float: none;
+		padding-left: 5px;
+		padding-right: 5px;
+	}
+	
+	body {
+		padding-top: 0px;
+	}
+}
+
+/*@media (max-width: 765px) {
+	
+	
+	.navbar-inner .container-fluid {
+		margin-left: 60px;
+	}
+}
+
+@media (max-width: 385px) {
+	
+	
+	body {
+		padding-top: 100px
+	}
+}
+
+.navbar-fixed-top {
+    position: fixed;
+}
+*/
+/* End navigation header */
+
+
+#exampleColumns {
+    font-size:1.5em;
+    line-height: 1.5em;
+}
+
+#referenceColumns {
+    line-height: 2em;
+}
+
+.imgDownload {
+    float: left;
+    width: 25em;
+    margin-left: 1em;
+}
+
+.listWithSpacing {
+    margin-bottom:20px;
+}
+
+.listWithSpacing li {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* Start Reference Pages */
+.referenceTag {
+    width: 100px;
+    float:left;
+    margin-right:50px;
+    font-size: 1.2em;
+    font-weight:bold;
+}
+
+.referenceDescriptor {
+    width: 550px;
+    float:left;
+}
+
+.referenceDescriptor li{
+    margin-bottom:10px;
+}
+
+.referenceRow {
+    margin-top:20px;
+    margin-bottom:40px;
+}
+
+.referenceName {
+    font-weight:bold;
+    font-size: 1.5em;
+}
+
+.function {
+    min-width: 200px;
+    max-width: 200px;
+}
+
+.paramTitle {
+    float:left;
+}
+
+.paramDescription {
+    float:right;
+}
+/* End Reference Pages */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*------------------------------------------------------------------------------
+
+
+Google Code style (c) Aahan Krish <geekpanth3r@gmail.com>
+
+*/
+
+pre code {
+  display: block; padding: 0.5em;
+  background: white; color: black;
+}
+
+pre .comment,
+pre .template_comment,
+pre .javadoc,
+pre .comment * {
+  color: #6d6c6c;
+}
+
+pre .keyword,
+pre .method,
+pre .list .title,
+pre .clojure .built_in,
+pre .nginx .title,
+pre .tag .title,
+pre .setting .value,
+pre .winutils,
+pre .tex .command,
+pre .http .title,
+pre .request,
+pre .status {
+  color: rgb(55, 155, 217);
+}
+
+pre .envvar,
+pre .tex .special {
+  color: #660;
+}
+
+pre .string,
+pre .tag .value,
+pre .cdata,
+pre .filter .argument,
+pre .attr_selector,
+pre .apache .cbracket,
+pre .date,
+pre .regexp {
+  color: #080;
+}
+
+pre .sub .identifier,
+pre .pi,
+pre .tag,
+pre .tag .keyword,
+pre .decorator,
+pre .ini .title,
+pre .shebang,
+pre .prompt,
+pre .hexcolor,
+pre .rules .value,
+pre .css .value .number,
+pre .literal,
+pre .symbol,
+pre .ruby .symbol .string,
+pre .number,
+pre .css .function,
+pre .clojure .attribute {
+  color: #066;
+}
+
+pre .class .title,
+pre .haskell .type,
+pre .smalltalk .class,
+pre .javadoctag,
+pre .yardoctag,
+pre .phpdoc,
+pre .typename,
+pre .tag .attribute,
+pre .doctype,
+pre .class .id,
+pre .built_in,
+pre .setting,
+pre .params,
+pre .variable,
+pre .clojure .title {
+  color: #606;
+}
+
+pre .css .tag,
+pre .rules .property,
+pre .pseudo,
+pre .subst {
+  color: #000;
+}
+
+pre .css .class, pre .css .id {
+  color: #9B703F;
+}
+
+pre .value .important {
+  color: #ff7700;
+  font-weight: bold;
+}
+
+pre .rules .keyword {
+  color: #C5AF75;
+}
+
+pre .annotation,
+pre .apache .sqbracket,
+pre .nginx .built_in {
+  color: #9B859D;
+}
+
+pre .preprocessor,
+pre .preprocessor * {
+  color: #444;
+}
+
+pre .tex .formula {
+  background-color: #EEE;
+  font-style: italic;
+}
+
+pre .diff .header,
+pre .chunk {
+  color: #808080;
+  font-weight: bold;
+}
+
+pre .diff .change {
+  background-color: #BCCFF9;
+}
+
+pre .addition {
+  background-color: #BAEEBA;
+}
+
+pre .deletion {
+  background-color: #FFC8BD;
+}
+
+pre .comment .yardoctag {
+  font-weight: bold;
+}
+
+pre .pConstant {
+  color: #660;
+}
+
+pre .pSetup {
+    font-weight: bold;
+    color: #0c2de0;   
+}
+
+pre .pSpecial {
+    color: #f50eda;
+}
+
+pre .pVariable {
+    color: #f5930e;
+}
+
+pre .pFunction {
+    color: #0c2de0;
+}
