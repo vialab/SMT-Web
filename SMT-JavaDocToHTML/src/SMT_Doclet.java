@@ -7,15 +7,13 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
+import java.util.Vector;
 
 import com.sun.javadoc.ClassDoc;
 import com.sun.javadoc.ConstructorDoc;
-import com.sun.javadoc.FieldDoc;
 import com.sun.javadoc.MethodDoc;
 import com.sun.javadoc.ParamTag;
-import com.sun.javadoc.ProgramElementDoc;
 import com.sun.javadoc.RootDoc;
-import com.sun.javadoc.Tag;
 
 public class SMT_Doclet {
 	// Exclude these classes from being included in the website
@@ -38,7 +36,9 @@ public class SMT_Doclet {
 		// Create reference.html with the classes and their functions
 		referenceWriter.write(classes);
 
-		
+		// Create file 
+		FileWriter coFstream = new FileWriter("Need_Comments.txt");
+		BufferedWriter coOut = new BufferedWriter(coFstream);
 		
 		
 		for (int i = 0; i < classes.length; i++) {
@@ -57,13 +57,13 @@ public class SMT_Doclet {
 				boolean constructFlag = false;
 						
 				if(classes[i].constructors().length > 0){
-					// Read in function template
+					// If class has constructors, read in function template
 					System.out.println("Reading in template: constructorTemplate.html");
 					classHTML = new Scanner( new File("constructorTemplate.html") ).useDelimiter("\\A").next();
 					
 					constructFlag = true;
 				} else {
-					// Read in class template
+					// If class does not have any constructors, read in class template
 					System.out.println("Reading in template: classTemplate.html");
 					classHTML = new Scanner( new File("classTemplate.html") ).useDelimiter("\\A").next();
 				}
@@ -72,56 +72,61 @@ public class SMT_Doclet {
 				String name = classes[i].name();
 				String description = classes[i].commentText();
 				
+				// Does a comment exist?
+				if(classes[i].commentText().equals(null) || classes[i].commentText().equals("")){
+					coOut.write(classes[i].name() + " missing description at top of class \n");
+				}
 				
+				// If class has constructors, get syntax of initialisation and parameters
 				if(constructFlag){
-					boolean paramFlag = false;
 					String syntax = "";
-	                   
-	                   
-	                for(ConstructorDoc constructor: classes[i].constructors()){
-	                	
-	                	//char letter = 'a';
+					String parameters = "";
+					ArrayList<ParamTag> pTags = new ArrayList<ParamTag>();
+					Vector<String> uniquePTags = new Vector<String>();
+					boolean paramFlag = false;
+	                
+					// Collect all the parameters
+	                for(ConstructorDoc constructor: classes[i].constructors()){                	
+	                	if(constructor.parameters().length > 0){
+	                		paramFlag = true;
+	                		
+	                		for(ParamTag paramTag: constructor.paramTags()) {
+	                			pTags.add(paramTag);
+	                		}
+	                		
+	                		if(constructor.paramTags().length != constructor.parameters().length){
+	        					coOut.write(constructor.name() + " missing parameter tags \n");
+	                		}
+		                	
+		                }
+					
+						// Get the syntax of the constructor initialisation calls
 						syntax = syntax.concat(classes[i].name() + "(");
 						
-						if(constructor.parameters().length > 0 && paramFlag == false){
-							paramFlag = true;
-						}
-					
-						
-						
 						for(int k = 0; k < constructor.parameters().length; k++){
-							//syntax = syntax.concat(letter + ", ");
 							syntax = syntax.concat(constructor.parameters()[k].name() + ", ");
-							
-							
-							
-							
-							//letter++;
-							
 							
 							if(k == constructor.parameters().length -1)
 								syntax = syntax.substring(0, syntax.length()-2);
 						}
 						
-						
 						syntax = syntax.concat(")<br>");
 	                }
 	                
-					String parameters = "";
-
 	                if(paramFlag){
 	                	parameters = paramStart;
-	                	ConstructorDoc firstConstructor = classes[i].constructors()[0];
-	                	for(ParamTag paramTag: firstConstructor.paramTags()) {
-	                		parameters = parameters.concat("<div class=\"paramTitle\">" + paramTag.parameterName() + ": </div>");
-							parameters = parameters.concat("<div class=\"paramDescription\">" + paramTag.parameterComment() + "</div>\n<br>"); 
-							
-	                	}
+	                	
+		                for(ParamTag paramTag: pTags){
+		                	if(!uniquePTags.contains(paramTag.parameterName())){
+		                		uniquePTags.add(paramTag.parameterName());
+		                		parameters = parameters.concat("<div class=\"paramTitle\">" + paramTag.parameterName() + ": </div>");
+		                		parameters = parameters.concat("<div class=\"paramDescription\">" + paramTag.parameterComment() + "</div>\n<br>");
+		                	}
+		                }						
+	                	
 	                	parameters = parameters.concat("</div> \n </div><br>");
 	                }
-					
-					
-					
+	                
 					classHTML = classHTML.replace("$Parameters", parameters);
 					classHTML = classHTML.replace("$Syntax", syntax);
 				}
@@ -157,19 +162,20 @@ public class SMT_Doclet {
 				//System.out.println("  field: " + fields[j]);
 			}*/
 
+			// Don't include these methods
 			if(Arrays.asList(excludeMethods).contains(classes[i].name())){
 				continue;
 			}
 			
 			Map<Object, ArrayList<MethodDoc>> methodMap = new HashMap<Object, ArrayList<MethodDoc>>();
-			
+			// Make a list of overloaded methods
 			for(MethodDoc m: classes[i].methods()){
 				ArrayList<MethodDoc> methodArray;
 				
 				if(methodMap.containsKey(m.name())){
 					methodArray = methodMap.get(m.name());
 					
-				}else {
+				} else {
 					methodArray = new ArrayList<MethodDoc>();
 				}
 				methodArray.add(m);
@@ -187,76 +193,74 @@ public class SMT_Doclet {
 				// Set name, description, syntax, parameters and returns
 				String name = firstMethod.containingClass().name() + "." + mName + "()";
 				
-				/*
-				 * Only taking the first method's JavaDoc comment as description!!
-				 * TODO
-				 */
+
 				String description = firstMethod.commentText();
 				
 				String syntax = "";
 				String parameters = "";
 				boolean paramFlag = false;
+				ArrayList<ParamTag> pTags = new ArrayList<ParamTag>();
+				Vector<String> uniquePTags = new Vector<String>();
+				Vector<String> uniqueReType = new Vector<String>();
+				String returns = "";
+				               	
+                	
 				
-				//char letter = 'a';
 				for(MethodDoc method: ((ArrayList<MethodDoc>) methodMap.get(mName))){
-						
+					// Get unique return types
+					String reType = method.returnType().typeName();
+					if(!uniqueReType.contains(reType)){
+                		uniquePTags.add(reType);
+                		returns = returns.concat(reType + " <br>");
+					}
+					
+					// Get all the parameter tags for the (overloaded) method(s)
+					if(method.parameters().length > 0){
+						paramFlag = true;
+                		for(ParamTag paramTag: method.paramTags()) {
+                			pTags.add(paramTag);
+                		}
+                		
+                		// Missing JavaDoc parameter tags?
+                		if(method.paramTags().length != method.parameters().length){
+        					coOut.write(classes[i].name() + " " + method.name() + " missing parameter tags \n");
+                		}
+	                	
+	                }	
+
 					
 					syntax = syntax.concat(method.name() + "(");
-					
-					if(method.parameters().length > 0 && paramFlag == false){
-						paramFlag = true;
-					}
-	                //parameters = parameters.concat(paramStart);
-	                   
-	                
-					
+
 					for(int k = 0; k < method.parameters().length; k++){
-						//syntax = syntax.concat(letter + ", ");
 						syntax = syntax.concat(method.parameters()[k].name() + ", ");
-						
-						//parameters = parameters.concat("<div class=\"paramTitle\">" + method.parameters()[k].name() + "&nbsp;&nbsp;&nbsp;&nbsp; - " + 
-						//		method.parameters()[k].typeName() + ": </div>");
-						
-						//if(method.paramTags().length > k) {
-						//	parameters = parameters.concat("<div class=\"paramDescription\">" + method.paramTags()[k].parameterComment() + "</div>\n<br>"); 
-						//} else {
-						//	parameters = parameters.concat("\n<br>"); 
-						//}
-						//letter++;
 						
 						if(k == method.parameters().length -1)
 							syntax = syntax.substring(0, syntax.length()-2);
 					}
 					
-					//parameters = parameters.concat("</div> \n </div>");
 					syntax = syntax.concat(")<br>");
 				}
 				
 				if(paramFlag){
                 	parameters = paramStart;
-                	MethodDoc firstmethod = (MethodDoc) methodMap.get(mName).get(0);
-                	for(ParamTag paramTag: firstmethod.paramTags()) {
-                		parameters = parameters.concat("<div class=\"paramTitle\">" + paramTag.parameterName() + ": </div>");
-						parameters = parameters.concat("<div class=\"paramDescription\">" + paramTag.parameterComment() + "</div>\n<br>"); 
-						
-                	}
-                	parameters = parameters.concat("</div> \n </div><br>");
-                }
+					for(ParamTag paramTag: pTags){
+	                	if(!uniquePTags.contains(paramTag.parameterName())){
+	                		uniquePTags.add(paramTag.parameterName());
+	                		parameters = parameters.concat("<div class=\"paramTitle\">" + paramTag.parameterName() + ": </div>");
+	                		parameters = parameters.concat("<div class=\"paramDescription\">" + paramTag.parameterComment() + "</div>\n<br>");
+	                	}
+	                }						
+	            	
+	            	parameters = parameters.concat("</div> \n </div><br>");
+				}
 				
-				String returns = firstMethod.returnType().typeName();
 				
 				// Replace holders with content
 				System.out.println("Replacing content");
 				functionHTML = functionHTML.replace("$Name", name);
 				functionHTML = functionHTML.replace("$Description", description);
 				functionHTML = functionHTML.replace("$Syntax", syntax);
-				
-				//if(firstMethod.parameters().length > 0){
-					functionHTML = functionHTML.replace("$Parameters", parameters);
-				//} else {
-				//	functionHTML = functionHTML.replace("$Parameters", "");
-				//}
-				
+				functionHTML = functionHTML.replace("$Parameters", parameters);
 				functionHTML = functionHTML.replace("$Returns", returns);
 				
 				// Write out HTML file
@@ -269,10 +273,17 @@ public class SMT_Doclet {
 				//Close the output stream
 				classOut.close();
 				
+				
+				// Does description comment exist?
+				if(description.equals(null) || description.equals("")){
+					coOut.write(classes[i].name() + " " + firstMethod.name() + " is missing description \n");
+				}
+				
 			}
 			
 			
 		}
+		coOut.close();
 
 		return true;
 	}

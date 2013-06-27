@@ -9,12 +9,12 @@ import java.util.Scanner;
 import com.sun.javadoc.ClassDoc;
 import com.sun.javadoc.MethodDoc;
 
-
+//Creates reference.html with the classes and their functions
 public class referenceWriter {
 
 	
 	public static void write(ClassDoc[] classes) throws IOException{
-		// Create reference.html with the classes and their functions
+		
 
 		// Read in reference template
 		System.out.println("Reading in template: referenceTemplate.html");
