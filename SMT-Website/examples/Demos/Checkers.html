@@ -1,0 +1,183 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Multi-Touch Toolkit [Examples]</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="../../css/bootstrap.min.css" rel="stylesheet" media="screen">    
+    <link href="../../css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
+	<link href="../../css/mainCSS.css" rel="stylesheet" media="screen">
+    <script src="../../js/highlight.pack.js"></script>
+	<script>
+		hljs.tabReplace = '    '; 
+		hljs.initHighlightingOnLoad();
+    </script>
+  </head>
+  <body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container-fluid">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="brand" href="#">Simple Multi-Touch (SMT)</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li><a href="../../index.html">Home</a></li>
+              <li><a href="../../download.html">Download</a></li>
+              <li><a href="../../about.html">About</a></li>
+                <li><a href="../../reference.html">Reference</a></li>
+              <li><a href="../../examples.html">Examples</a></li>
+              <li><a href="../../contact.html">Contact</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+    
+    
+      <div class="container-fluid">
+      <div class="row-fluid">
+        <div class="span3">
+          <div class="well sidebar-nav">
+            <ul class="nav nav-list">
+              <li class="nav-header">Pages</li>
+              <li><a href="../../index.html">Home</a></li>
+              <li><a href="../../download.html">Download</a></li>
+              <li><a href="../../about.html">About</a></li>
+                <li><a href="../../reference.html">Reference</a></li>
+              <li><a href="../../examples.html">Examples</a></li>
+              <li><a href="../../contact.html">Contact</a></li>
+            </ul>
+          </div><!--/.well -->
+        </div><!--/span-->
+        <div class="span9">
+          <div class="row-fluid">
+            <div class="span10">
+              <h2>Checkers</h2>
+              		<pre>
+<code class="java">/**
+ *  This is a simple checkers game, the pieces can be dragged around
+ */
+import vialab.SMT.*;
+
+//set some configuration constants
+final int PIECES_PER_PLAYER=12;
+
+CheckerZone p1[]=new CheckerZone[PIECES_PER_PLAYER];
+CheckerZone p2[]=new CheckerZone[PIECES_PER_PLAYER];
+
+class CheckerZone extends Zone{
+   color c;
+   CheckerZone(String name, int x, int y, int w, int h,color c){
+     super(name, x, y, w, h); 
+     this.c=c; 
+   }
+}
+void setup() {
+  size(displayWidth, displayHeight, P3D);
+  TouchClient.init(this, TouchSource.MOUSE);
+  for(int i=0; i<PIECES_PER_PLAYER; i++){
+    p1[i]=new CheckerZone("Checker",0, 0, 100, 100,color(255,0,0));
+    TouchClient.add(p1[i]);
+    p1[i].setDirect(true);
+  }
+  for(int i=0; i<PIECES_PER_PLAYER; i++){
+    p2[i]=new CheckerZone("Checker",0, 0, 100, 100,color(255,255,255));
+    TouchClient.add(p2[i]);
+    p2[i].setDirect(true);
+  }
+  int c1=0,c2=0;
+  for(int i=0; i<8; i++){
+    for(int j=0; j<8; j++){
+      if((i+j)%2==1){
+        if(j<3){
+          p1[c1].beginTouch();
+          p1[c1].translate(((displayWidth-1000)/2)+i*125+12,((displayHeight-1000)/2)+j*125+12);
+          p1[c1].endTouch();
+          c1+=1;
+        }
+        if(j>4){
+          p2[c2].beginTouch();
+          p2[c2].translate(((displayWidth-1000)/2)+i*125+12,((displayHeight-1000)/2)+j*125+12);
+          p2[c2].endTouch();
+          c2+=1;
+        }
+      }  
+    }
+  }
+}
+
+void draw() {
+  background(79, 129, 189);
+  fill(245,245,220);
+  rect((displayWidth-1000)/2,(displayHeight-1000)/2,1000,1000);
+  fill(150,75,0);
+  for(int i=0; i<8; i++){
+    for(int j=0; j<8; j++){
+      if((i+j)%2==1){
+        rect(((displayWidth-1000)/2)+i*125,((displayHeight-1000)/2)+j*125,125,125);
+      }  
+    }
+  }
+  fill(255);
+  text(round(frameRate)+"fps, # of zones: "+TouchClient.getZones().length,width/2,10);
+  TouchClient.drawPickBuffer(0,0,100,100);
+}
+
+void drawChecker(CheckerZone zone){
+  fill(zone.c);
+  ellipse(50,50,100,100);
+}
+
+void pickDrawChecker(CheckerZone zone){
+  ellipse(50,50,100,100);
+}
+
+void touchChecker(CheckerZone zone){
+  zone.drag();
+}
+
+</code></pre>
+                </div><!--/span-->
+          </div><!--/row-->
+            
+            <!--<div class="row-fluid" style="margin-top:20px;">
+                <div style="width: 200px;float:left;">
+                    <h4>Description</h4>
+                </div>
+                <div style="width: 400px;float:left;">
+                    <p>
+                    $Description
+                    </p>
+                </div>
+          
+            </div>-->
+     
+
+          
+          </div><!--/span-->
+          </div><!--/row-->
+         
+
+      <hr>
+
+      <footer>
+        <p>&copy; <a href="http://www.ErikPaluka.com" target="_blank">Erik Paluka</a>, <a href="http://vialab.science.uoit.ca/portfolio/zachary-cook" target="_blank">Zachary Cook</a>, <a href="http://touchlab.uwaterloo.ca/" target="_blank">Dr. Mark Hancock</a>, <a href="http://vialab.science.uoit.ca" target="_blank">Dr. Christopher Collins</a></p>
+      </footer>
+
+   </div><!--/.fluid-container-->
+	
+	
+	
+	
+	
+	
+	<script src="http://code.jquery.com/jquery.js"></script>
+    <script src="../../js/bootstrap.min.js"></script>
+  </body>
+
+</html>

@@ -45,8 +45,7 @@ body {
 
 
 #exampleColumns {
-    font-size:1.5em;
-    line-height: 1.5em;
+    line-height: 2em;
 }
 
 #referenceColumns {
@@ -97,6 +96,11 @@ body {
 }
 
 .function {
+    min-width: 200px;
+    max-width: 200px;
+}
+
+.example {
     min-width: 200px;
     max-width: 200px;
 }
