@@ -67,6 +67,19 @@ SliderZone setMaxValue is missing description
 SliderZone setCurrentValue missing parameter tags 
 SliderZone setCurrentValue is missing description 
 SliderZone getLabel is missing description 
+SMT getTouchesFromZone is missing description 
+SMT getAssignedTouches is missing description 
+SMT setFastPicking missing parameter tags 
+SMT setFastPicking is missing description 
+SMT getUnassignedTouches is missing description 
+SMT getTouchMap is missing description 
+SMT assignTouches is missing description 
+SMT init missing parameter tags 
+SMT getActiveZones is missing description 
+SMT getPathStartTouch is missing description 
+SMT putZoneOnTop is missing description 
+SMT runExe missing parameter tags 
+SMT getTouchCollectionFromZone is missing description 
 SMTUtilities getZoneMethod missing parameter tags 
 SMTUtilities getZoneMethod missing parameter tags 
 TabZone missing parameter tags 
@@ -105,19 +118,6 @@ Touch getX is missing description
 Touch unassignZone is missing description 
 Touch getCurrentPoint is missing description 
 Touch getAssignedZones is missing description 
-TouchClient getTouchesFromZone is missing description 
-TouchClient getAssignedTouches is missing description 
-TouchClient setFastPicking missing parameter tags 
-TouchClient setFastPicking is missing description 
-TouchClient getUnassignedTouches is missing description 
-TouchClient getTouchMap is missing description 
-TouchClient assignTouches is missing description 
-TouchClient init missing parameter tags 
-TouchClient getActiveZones is missing description 
-TouchClient getPathStartTouch is missing description 
-TouchClient putZoneOnTop is missing description 
-TouchClient runExe missing parameter tags 
-TouchClient getTouchCollectionFromZone is missing description 
 TouchPair missing parameter tags 
 TouchPair missing parameter tags 
 TouchPair getFromVec is missing description 
@@ -136,6 +136,7 @@ Zone stroke missing parameter tags
 Zone stroke missing parameter tags 
 Zone stroke is missing description 
 Zone setMatrixFromBody is missing description 
+Zone getLocalX missing parameter tags 
 Zone getLocalX is missing description 
 Zone getLocalY is missing description 
 Zone isChildActive is missing description 
