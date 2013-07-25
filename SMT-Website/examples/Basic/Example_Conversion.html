@@ -1,8 +1,7 @@
-
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Simple Multi-Touch Toolkit [Examples]</title>
+    <title>Simple Multi-Touch (SMT) Toolkit [Examples]</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap -->
     <link href="../../css/bootstrap.min.css" rel="stylesheet" media="screen">    
@@ -91,7 +90,7 @@ void setup() {
   //This provides the multi-touch functionality, and TouchSource selection
   //change MOUSE to SMART to switch from using the mouse for
   //input to Smart table multitouch input for example 
-  SMT.init(this, TouchSource.MOUSE);
+  SMT.init(this, TouchSource.MULTIPLE);
   
   //this adds a zone to the SMT, with the given parameters
   //String name, int x, int y, int width, int height

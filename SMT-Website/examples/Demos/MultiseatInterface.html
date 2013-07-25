@@ -1,8 +1,7 @@
-
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Simple Multi-Touch Toolkit [Examples]</title>
+    <title>Simple Multi-Touch (SMT) Toolkit [Examples]</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap -->
     <link href="../../css/bootstrap.min.css" rel="stylesheet" media="screen">    
@@ -67,7 +66,7 @@ import vialab.SMT.*;
 
 void setup() {
   size(displayWidth, displayHeight, OPENGL);
-  SMT.init(this, TouchSource.MOUSE);
+  SMT.init(this, TouchSource.MULTIPLE);
   
   //create a "UserArea" Zone for each user
   Zone z1=new Zone("UserArea",0, 0, 800, 200);

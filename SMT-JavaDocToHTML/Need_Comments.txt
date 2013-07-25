@@ -80,6 +80,7 @@ SMT getPathStartTouch is missing description
 SMT putZoneOnTop is missing description 
 SMT runExe missing parameter tags 
 SMT getTouchCollectionFromZone is missing description 
+SMTUtilities loadMethods missing parameter tags 
 SMTUtilities getZoneMethod missing parameter tags 
 SMTUtilities getZoneMethod missing parameter tags 
 TabZone missing parameter tags 
@@ -160,6 +161,7 @@ Zone getTouchCollection is missing description
 Zone keyReleased missing parameter tags 
 Zone keyReleased missing parameter tags 
 Zone keyReleased is missing description 
+Zone isAncestor is missing description 
 Zone toss is missing description 
 Zone setName is missing description 
 Zone keyTyped missing parameter tags 

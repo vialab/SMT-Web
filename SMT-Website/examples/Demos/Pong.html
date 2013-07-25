@@ -1,8 +1,7 @@
-
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Simple Multi-Touch Toolkit [Examples]</title>
+    <title>Simple Multi-Touch (SMT) Toolkit [Examples]</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap -->
     <link href="../../css/bootstrap.min.css" rel="stylesheet" media="screen">    
@@ -111,7 +110,7 @@ void setup() {
   for (int i=0; i<NUM_BALLS; i++) {
     balls.add(new Ball());
   }
-  SMT.init(this, TouchSource.MOUSE);
+  SMT.init(this, TouchSource.MULTIPLE);
   for (int i = 0; i < NUM_ZONES; i++) {
     zone[i] = new reflectZone("Paddle",(i%2)*(displayWidth-450)+200, 400, 50, 300, (i%2==0)? new PVector(1.0, 0):new PVector(-1.0, 0.0));
     SMT.add(zone[i]);

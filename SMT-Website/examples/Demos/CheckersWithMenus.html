@@ -1,8 +1,7 @@
-
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Simple Multi-Touch Toolkit [Examples]</title>
+    <title>Simple Multi-Touch (SMT) Toolkit [Examples]</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap -->
     <link href="../../css/bootstrap.min.css" rel="stylesheet" media="screen">    
@@ -103,7 +102,7 @@ class CheckerZone extends Zone{
 
 void setup() {
   size(displayWidth, displayHeight, OPENGL);
-  SMT.init(this, TouchSource.MOUSE);
+  SMT.init(this, TouchSource.MULTIPLE);
   
   //call this to not display warnings for unimplemented methods
   //client.setWarnUnimplemented(false);

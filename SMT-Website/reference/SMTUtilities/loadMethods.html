@@ -1,17 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Simple Multi-Touch (SMT) Toolkit [Examples]</title>
+    <title>Simple Multi-Touch (SMT) Toolkit [Reference]</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap -->
     <link href="../../css/bootstrap.min.css" rel="stylesheet" media="screen">    
     <link href="../../css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
 	<link href="../../css/mainCSS.css" rel="stylesheet" media="screen">
-    <script src="../../js/highlight.pack.js"></script>
-	<script>
-		hljs.tabReplace = '    '; 
-		hljs.initHighlightingOnLoad();
-    </script>
   </head>
   <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
@@ -55,54 +50,65 @@
         </div><!--/span-->
         <div class="span9">
           <div class="row-fluid">
-            <div class="span10">
-              <h2>Custom</h2>
-              		<pre>
-<code class="java">/**
- *  This example show how to define your own custom Zone. It will
- *  draw whatever is placed in the drawCustom() method, and the
- *  touchCustom() method defines what happens when it is touched.
- *
- *  These methods are based of the name given to the Zone, so
- *  your Zone "Test123" would use the methods: drawTest123() and
- *  touchTest123()
- */
-
-import vialab.SMT.*;
-void setup() {
-  size(400, 400, P3D);
-  SMT.init(this, TouchSource.MULTIPLE);
-  SMT.add(new Zone("Custom",0,0,200,200));
-}
-void draw() {
-  background(79, 129, 189);
-}
-void drawCustom(){
-  background(0);
-  fill(255);
-  ellipse(100,100,100,100); 
-}
-void touchCustom(Zone z){
-  z.rst();
-}
-
-</code></pre>
-                </div><!--/span-->
-          </div><!--/row-->
-            
-            <!--<div class="row-fluid" style="margin-top:20px;">
-                <div style="width: 200px;float:left;">
-                    <h4>Description</h4>
+            <div class="span12">
+                
+            <div class="row-fluid referenceRow">
+                <div class="referenceTag">
+                    Name
                 </div>
-                <div style="width: 400px;float:left;">
+                <div class="referenceDescriptor">
+                   
+                        <span class="referenceName">SMTUtilities.loadMethods()</span>
+                    
+                </div>
+          
+            </div>
+                
+            <div class="row-fluid referenceRow">
+                <div class="referenceTag">
+                    Description
+                </div>
+                <div class="referenceDescriptor">
                     <p>
-                    $Description
+                    This scans all classes in the parent and SMT.extraClassList and puts the found methods into methodMap indexed by their name suffixed with parameters
                     </p>
                 </div>
           
-            </div>-->
-     
-
+            </div>
+            
+            <div class="row-fluid referenceRow">
+                <div class="referenceTag">
+                    Syntax
+                </div>
+                <div class="referenceDescriptor">
+                    <p>
+                    loadMethods(c)<br>
+                    </p>
+                </div>
+          
+            </div>
+            
+            <div class="row-fluid referenceRow"> 
+<div class="referenceTag">Parameters</div> 
+<div class="referenceDescriptor"> 
+</div> 
+ </div><br>
+            
+            <div class="row-fluid referenceRow">
+                <div class="referenceTag">
+                    Returns
+                </div>
+                <div class="referenceDescriptor">
+                    <p>
+                    void <br>
+                    </p>
+                </div>
+          
+            </div>
+              
+            
+          </div><!--/span-->
+          </div><!--/row-->
           
           </div><!--/span-->
           </div><!--/row-->
