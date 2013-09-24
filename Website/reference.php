@@ -17,7 +17,7 @@
 		<div class="row-fluid">
 			<div class="span12" id="referenceColumns">
 				<ul class="listWithSpacing">
-					<li>Check out the Simple Multi-Touch <a href="http://vialab.github.com/SMT">JavaDoc here.</a></li>
+					<li>Check out the Simple Multi-Touch <a href="http://vialab.github.io/SMT">JavaDoc here.</a></li>
 					<li>See the processing API at <a href="http://www.processing.org/reference/">Processing.org/reference/</a> for a complete list and documentation of all available processing functions.</li>
 				</ul>
 				<div class="span4 function"> 

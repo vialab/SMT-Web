@@ -11,7 +11,7 @@
 		#lastUpdate { font-size: 0.8em;}
 	</style>
 </head>
-<body>
+<body onload="updateDate();">
 	<?php
 		$thisPage = "Home";
 		include 'include/header.php';
@@ -27,7 +27,7 @@
 				</h3>
 			</h1>
 			<p style="margin-top:60px;">
-				<a href="about.html" class="btn btn-primary btn-large">Learn more &raquo;</a>
+				<a href="about.php" class="btn btn-primary btn-large">Learn more &raquo;</a>
 			</p>
 		</div>
 		<div class="row-fluid">
