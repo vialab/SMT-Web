@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Simple Multi-Touch (SMT) Toolkit [About]</title>
+	<title>Simple Multi-Touch (SMT) Toolkit [Tutorial]</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<!-- Bootstrap -->
 	<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">    
@@ -73,7 +73,7 @@ void setup(){
 						<p>
 							Whenever using SMT, <code>SMT.init()</code> must be called. It must be called after <code>size()</code>.
 						</p>
-						<p>SMT only supports OpenGL 3d renderers, so for the third parameter in <code>size()</code> you must use <code>OPENGL</code> or <code>P3D</code>. There are multiple possible values for the second parameter of <code>SMT.init()</code>, but for now, we'll just use <code>MULTIPLE</code> to automatically detect the source.
+						<p>SMT only supports OpenGL 3d renderers, so the third parameter in <code>size()</code> must be <code>OPENGL</code> or <code>P3D</code>. There are multiple possible values for the second parameter of <code>SMT.init()</code>, but for now, we'll just use <code>MULTIPLE</code> to automatically detect the source.
 						</p>
 						<h4>Entire Source Code for Tutorial:</h4>
 <pre><code class="java">import vialab.SMT.*;
@@ -102,8 +102,7 @@ void pickDrawMyZone(Zone zone){
 //Touch function for "myZone"
 void touchMyZone(Zone zone){
 	zone.drag();
-}
-</code></pre>
+}</code></pre>
 					</div><!--/span-->
 				</div><!--/row-->
 			</div><!--/span-->

@@ -22,13 +22,10 @@ function updateDate() {
         }
         document.getElementById("lastUpdate").innerHTML = daysPast;
     });
-
-
 }
 
 
 function daysBetween(date1, date2) {
-
     // The number of milliseconds in one day
     var ONE_DAY = 1000 * 60 * 60 * 24;
 
@@ -41,5 +38,4 @@ function daysBetween(date1, date2) {
 
     // Convert back to days and return
     return Math.round(difference_ms / ONE_DAY);
-
 }
