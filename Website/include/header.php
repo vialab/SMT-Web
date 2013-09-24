@@ -1,12 +1,12 @@
 <?php
 	$_navlist = [
-		["\"index.html\"","Home"],
-		["\"download.html\"","Download"],
-		["\"about.html\"","About"],
-		["\"tutorial.html\"","Tutorial"],
-		["\"reference.html\"","Reference"],
-		["\"examples.html\"","Examples"],
-		["\"contact.html\"","Contact"]];
+		["\"./\"","Home"],
+		["\"download.php\"","Download"],
+		["\"about.php\"","About"],
+		["\"tutorial.php\"","Tutorial"],
+		["\"reference.php\"","Reference"],
+		["\"examples.php\"","Examples"],
+		["\"contact.php\"","Contact"]];
 	function navlist( $thisPage){
 		global $thisPage, $_navlist;
 		foreach( $_navlist as $node){
@@ -23,16 +23,9 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="brand" href="#">Simple Multi-Touch (SMT)</a>
+				<a class="brand" href="./">Simple Multi-Touch (SMT)</a>
 				<div class="nav-collapse collapse">
 					<ul class="nav">
-						<!--<li><a href="index.html">Home</a></li>
-						<li><a href="download.html">Download</a></li>
-						<li><a href="about.html">About</a></li>
-						<li class="active"><a href="tutorial.html">Tutorial</a></li>
-						<li><a href="reference.html">Reference</a></li>
-						<li><a href="examples.html">Examples</a></li>
-						<li><a href="contact.html">Contact</a></li>-->
 						<?php navlist()?>
 					</ul>
 				</div><!--/.nav-collapse -->
@@ -45,13 +38,6 @@
 				<div class="well sidebar-nav">
 					<ul class="nav nav-list">
 						<li class="nav-header">Pages</li>
-						<!--<li><a href="index.html">Home</a></li>
-						<li><a href="download.html">Download</a></li>
-						<li><a href="about.html">About</a></li>
-						<li class="active"><a href="tutorial.html">Tutorial</a></li>
-						<li><a href="reference.html">Reference</a></li>
-						<li><a href="examples.html">Examples</a></li>
-						<li><a href="contact.html">Contact</a></li>-->
 						<?php navlist()?>
 					</ul>
 				</div><!--/.well -->
