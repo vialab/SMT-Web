@@ -36,3 +36,5 @@ git-prepare:
 
 update: update.sh
 	./update.sh
+update-kiwi:
+	scp -r * kiwiheart.ca:~/smt-web
