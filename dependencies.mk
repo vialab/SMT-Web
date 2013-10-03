@@ -1,9 +1,8 @@
 #dependencies
 
+#list definitions
+class_files= \
 
-#variables definitions
-class_files = \
+java_files= \
 
-java_files = \
-
-source_files = \
+html_files= \

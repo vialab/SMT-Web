@@ -21,44 +21,35 @@ public class ExamplesToHTML {
 		ArrayList<String> folders = new ArrayList<String>();
 		
 		try {
-			folders = examplesPage.write(dir, webFolder);
-		} catch (IOException e) {
+			folders = examplesPage.write(dir, webFolder);}
+		catch (IOException e) {
 			System.out.println("Error in writing examples.html");
-			e.printStackTrace();
-		}
+			e.printStackTrace();}
 		
 		String exampleTemp = "";
 		
 		try {
-			exampleTemp = new Scanner( new File("exampleTemplate.html") ).useDelimiter("\\A").next();
-		} catch (FileNotFoundException e) {
+			exampleTemp = new Scanner( new File("exampleTemplate.html") ).useDelimiter("\\A").next();}
+		catch (FileNotFoundException e) {
 			System.out.println("Error in reading exampleTemplate.html");
-			e.printStackTrace();
-		}
-		
+			e.printStackTrace();}
 		
 		// create new filename filter
-        FilenameFilter fileNameFilter = new FilenameFilter() {
-  
-           @Override
-           public boolean accept(File dir, String name) {
-              if(name.lastIndexOf('.') > 0)
-              {
-                 // get last index for '.' char
-                 int lastIndex = name.lastIndexOf('.');
-                 
-                 // get extension
-                 String str = name.substring(lastIndex);
-                 
-                 // match path name extension
-                 if(str.equals(".pde"))
-                 {
-                    return true;
-                 }
-              }
-              return false;
-           }
-        };
+		FilenameFilter fileNameFilter = new FilenameFilter() {
+			@Override
+			public boolean accept(File dir, String name) {
+				if(name.lastIndexOf('.') > 0){
+					// get last index for '.' char
+					int lastIndex = name.lastIndexOf('.');
+					// get extension
+					String str = name.substring(lastIndex);
+					// match path name extension
+					if(str.equals(".pde"))
+						return true;
+				}
+				return false;
+			}
+		};
 		
 
 		for(String s: folders){
@@ -76,49 +67,42 @@ public class ExamplesToHTML {
 					int numPDEs = 0;
 					
 					// Find number of PDE files in example
-					for(File pf: pde){
-						if(pf.isFile()){
+					for(File pf: pde)
+						if(pf.isFile())
 							numPDEs++;
-						}
-						
-					}
-					
-					
 					
 					try {
-						if(numPDEs == 1){
+						if(numPDEs == 1)
 							example = new Scanner( new File(fileDir + pde[0].getName()) ).useDelimiter("\\A").next();
-						} else if(numPDEs > 1){
+						else if(numPDEs > 1){
 							//Find main pde file
 							int mainPDE = -1;
-							for(int i = 0; i < numPDEs; i++){
-
+							for(int i = 0; i < numPDEs; i++)
 								if(pde[i].getName().substring(0, pde[i].getName().length() - 4).equalsIgnoreCase(f.getName())){
 									mainPDE = i;
 									example = example.concat(new Scanner( new File(fileDir + pde[mainPDE].getName()) ).useDelimiter("\\A").next());
 									example = example.concat("</code></pre><pre><code>");
 									break;
 								}
-							}
 							
-							for(int i = 0; i < numPDEs; i++){
+							for(int i = 0; i < numPDEs; i++)
 								if(i != mainPDE){
 									example = example.concat(new Scanner( new File(fileDir + pde[i].getName()) ).useDelimiter("\\A").next());
-								
+
 									if(i < numPDEs - 2){
 										example = example.concat("</code></pre><pre><code>");
 									}
 								}
-							}
 						}
-					} catch (FileNotFoundException e) {
+					}
+					catch (FileNotFoundException e) {
 						System.out.println("Error in reading " + pde[0].getName());
 						e.printStackTrace();
 					}
 					
 					//String pdeName = pde[0].getName().substring(0, pde[0].getName().length() - 4);
 					String pdeName = f.getName();
-							
+
 					html = html.replace("$Name", pdeName);
 					html = html.replace("$Code", example);
 					
