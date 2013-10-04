@@ -1,19 +1,19 @@
 <?php
 	$_navlist = [
-		["\"./\"","Home"],
-		["\"download.php\"","Download"],
-		["\"about.php\"","About"],
-		["\"tutorial.php\"","Tutorial"],
-		["\"reference.php\"","Reference"],
-		["\"examples.php\"","Examples"],
-		["\"contact.php\"","Contact"]];
+		["","Home"],
+		["download.php","Download"],
+		["about.php","About"],
+		["tutorial.php","Tutorial"],
+		["reference.php","Reference"],
+		["examples.php","Examples"],
+		["contact.php","Contact"]];
 	function navlist( $thisPage){
 		global $thisPage, $_navlist;
 		foreach( $_navlist as $node){
 			$href = $node[0];
 			$text = $node[1];
 			$active = $text == $thisPage ? " class=\"active\"" : "";
-			print( "<li".$active."><a href=".$href.">".$text."</a></li>\n");}}
+			print( "<li".$active."><a href=\"/smt/".$href."\">".$text."</a></li>\n");}}
 ?>
 	<div class="navbar navbar-inverse navbar-fixed-top">
 		<div class="navbar-inner">
@@ -23,7 +23,7 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="brand" href="./">Simple Multi-Touch (SMT)</a>
+				<a class="brand" href="/smt/">Simple Multi-Touch (SMT)</a>
 				<div class="nav-collapse collapse">
 					<ul class="nav">
 						<?php navlist()?>

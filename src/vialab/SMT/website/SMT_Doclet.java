@@ -22,7 +22,6 @@ import com.sun.javadoc.RootDoc;
 public class SMT_Doclet {
 	// Exclude these classes from being included in the website
 	static String[] exclude = {"PGraphicsDelegate", "MouseToTUIO"};
-
 	//Exclude these classes' methods
 	static String[] excludeMethods = {"TouchSource", "TouchDraw"};
 

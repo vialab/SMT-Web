@@ -2,7 +2,4 @@
 
 #list definitions
 class_files= \
-
-java_files= \
-
-html_files= \
+	bin/vialab/SMT/website/SMTDoclet.class
