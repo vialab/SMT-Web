@@ -75,42 +75,43 @@ public class SMT_Doclet {
 							for(ParamTag paramTag: constructor.paramTags())
 								pTags.add(paramTag);
 							if(constructor.paramTags().length != constructor.parameters().length)
-								coOut.write(constructor.name() + " missing parameter tags \n");}
+								coOut.write(constructor.name() + " missing parameter tags \n");
+						}
 						// Get the syntax of the constructor initialisation calls
 						syntax = syntax.concat(classes[i].name() + "(");
-							for(int k = 0; k < constructor.parameters().length; k++){
-								syntax = syntax.concat(constructor.parameters()[k].name() + ", ");
-								if(k == constructor.parameters().length -1)
-									syntax = syntax.substring(0, syntax.length()-2);
-							}
-							syntax = syntax.concat(")<br>");
+						for(int k = 0; k < constructor.parameters().length; k++){
+							syntax = syntax.concat(constructor.parameters()[k].name() + ", ");
+							if(k == constructor.parameters().length -1)
+								syntax = syntax.substring(0, syntax.length()-2);
 						}
-						if(paramFlag){
-							parameters = paramStart;
-							for(ParamTag paramTag: pTags){
-								if(!uniquePTags.contains(paramTag.parameterName())){
-									uniquePTags.add(paramTag.parameterName());
-									parameters = parameters.concat("<div class=\"paramTitle\">" + paramTag.parameterName() + ": </div>");
-									parameters = parameters.concat("<div class=\"paramDescription\">" + paramTag.parameterComment() + "</div>\n<br>");
-								}
-							}
-							parameters = parameters.concat("</div> \n </div><br>");
-						}
-						classHTML = classHTML.replace("$Parameters", parameters);
-						classHTML = classHTML.replace("$Syntax", syntax);
+						syntax = syntax.concat(")<br>");
 					}
+					if(paramFlag){
+						parameters = paramStart;
+						for(ParamTag paramTag: pTags){
+							if(!uniquePTags.contains(paramTag.parameterName())){
+								uniquePTags.add(paramTag.parameterName());
+								parameters = parameters.concat("<div class=\"paramTitle\">" + paramTag.parameterName() + ": </div>");
+								parameters = parameters.concat("<div class=\"paramDescription\">" + paramTag.parameterComment() + "</div>\n<br>");
+							}
+						}
+						parameters = parameters.concat("</div> \n </div><br>");
+					}
+					classHTML = classHTML.replace("$Parameters", parameters);
+					classHTML = classHTML.replace("$Syntax", syntax);
+				}
 				// Replace holders with content
-					System.out.println("Replacing content");
-					classHTML = classHTML.replace("$Name", name);
-					classHTML = classHTML.replace("$Description", description);
+				System.out.println("Replacing content");
+				classHTML = classHTML.replace("$Name", name);
+				classHTML = classHTML.replace("$Description", description);
 				// Write out HTML file
-					System.out.println("Making file " + classFolder + "/" + classes[i].name() + ".html");
+				System.out.println("Making file " + classFolder + "/" + classes[i].name() + ".html");
 				// Create file 
-					FileWriter classFstream = new FileWriter(classFolder + "/" + classes[i].name() + ".html");
-					BufferedWriter classOut = new BufferedWriter(classFstream);
-					classOut.write(classHTML);
+				FileWriter classFstream = new FileWriter(classFolder + "/" + classes[i].name() + ".html");
+				BufferedWriter classOut = new BufferedWriter(classFstream);
+				classOut.write(classHTML);
 				//Close the output stream
-					classOut.close();
+				classOut.close();
 			}
 			catch (Exception e){//Catch exception if any
 				System.err.println("Error: " + e.getMessage());
@@ -124,9 +125,9 @@ public class SMT_Doclet {
 				//System.out.println("  field: " + fields[j]);
 			}*/
 			// Don't include these methods
-			if(Arrays.asList(excludeMethods).contains(classes[i].name())){
+			if(Arrays.asList(excludeMethods).contains(classes[i].name()))
 				continue;
-			}
+
 			Map<Object, ArrayList<MethodDoc>> methodMap = new HashMap<Object, ArrayList<MethodDoc>>();
 			// Make a list of overloaded methods
 			for(MethodDoc m: classes[i].methods()){

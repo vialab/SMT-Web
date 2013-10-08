@@ -4,13 +4,13 @@
 	<?php
 		$title = "[Reference]";
 		$containsCode = true;
-		include 'include/head.php';
+		include '../../include/head.php';
 	?>
 </head>
 <body>
 	<?php
 		$thisPage = "Reference";
-		include 'include/header.php';
+		include '../../include/header.php';
 	?>
 	<!--Start of this page's content-->
 		<div class="row-fluid referenceRow">
@@ -41,7 +41,14 @@
 				</p>
 			</div>
 		</div>
-		$Parameters
+		<div class="row-fluid referenceRow"> 
+			<div class="referenceTag">
+				Parameters
+			</div> 
+			<div class="referenceDescriptor">
+				$Parameters
+			<div/>
+		</div>
 		<div class="row-fluid referenceRow">
 			<div class="referenceTag">
 				Returns
@@ -54,7 +61,7 @@
 		</div>
 	<!--End of this page's content-->
 	<?php
-		include 'include/footer.php';
+		include '../../include/footer.php';
 	?>
 </body>
 </html>
