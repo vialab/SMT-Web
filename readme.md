@@ -1,6 +1,7 @@
 SMT Website
 ===========
 Website and website generation for Simple Multi-Touch.
+[vialab.science.uoit.ca/SMT](http://vialab.science.uoit.ca/SMT/)
 
 Authors
 -------
