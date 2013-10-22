@@ -43,5 +43,3 @@
 				</div><!--/.well -->
 			</div><!--/span-->
 			<div class="span7">
-				<div class="row-fluid">
-					<div class="span10">

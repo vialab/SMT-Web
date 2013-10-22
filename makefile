@@ -8,7 +8,7 @@ freshen: clean build
 #variables
 cp = -cp src:bin:lib/*
 dest = -d bin
-docscp = -classpath data/src:data/bin:data/lib/*
+docscp = -classpath data/src:data/bin:data/lib/*:data/lib/processing/*
 export_directory = website
 version = 
 #warnings = -Xlint:-options
@@ -31,11 +31,14 @@ data:
 #basic commands
 build: $(class_files)
 
-update: build \
+update: build $(export_directory) \
 		update-data \
 		update-examples \
 		update-reference
-	cp -r html/* $(export_directory)
+	cp -a html/* $(export_directory)
+	cp -r data/javadoc $(export_directory)
+	cp data/library.properties $(export_directory)/dl/SMT.txt
+#	cp data/SMT.zip $(export_directory)/dl/
 
 #extra commands
 clean-specials:
@@ -46,8 +49,10 @@ git-prepare:
 	git add -u
 
 #update macros
-update-data: data
-	cd data && git pull origin master
+update-data: data $(export_directory)
+	cd data && \
+		git pull origin master && \
+		make docs
 update-examples: $(export_directory)
 	rm -rf $(export_directory)/examples
 	script/examples.sh $(export_directory)
@@ -63,6 +68,6 @@ update-reference: $(export_directory) build
 #push macros
 push-localhost:
 	sudo rm -rf /var/www/html/smt/*
-	sudo cp -r website/* /var/www/html/smt/
+	sudo cp -a website/* /var/www/html/smt/
 push-kiwiheart:
-	scp -r website/* kiwiheart.ca:~/smt-web
+	scp -a website/* kiwiheart.ca:~/smt-web

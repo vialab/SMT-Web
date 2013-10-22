@@ -6,6 +6,9 @@
 		$containsCode = true;
 		include 'include/head.php';
 	?>
+	<style>
+		:first-child{margin-left:0}
+	</style>
 </head>
 <body>
 	<?php
@@ -22,13 +25,13 @@
 		</p>
 		<div class="row-fluid">
 			<div class="span12" id="referenceColumns">
-<?php
-				$reference = 'reference';
-				foreach( scandir($reference) as $folder){
-					if( $folder[0] == '.') continue;
-					echo( '<div class="span4 function"><h4>'.$folder."</h4>\n");
-					include $reference.'/'.$folder.'/include.php';
-					echo( "</div>\n");}
+				<?php
+					$reference = 'reference';
+					foreach( scandir($reference) as $folder){
+						if( $folder[0] == '.') continue;
+						echo( '<div class="span4 function"><h4>'.$folder."</h4>\n");
+						include $reference.'/'.$folder.'/include.php';
+						echo( "</div>\n");}
 				?>
 			</div><!--/span-->
 		</div><!--/row-->
