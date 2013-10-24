@@ -42,7 +42,7 @@ update: build $(export_directory) \
 
 #extra commands
 clean-specials:
-	rm -rf $(export_directory)
+	rm -rf $(export_directory)/*
 
 git-prepare:
 	git add -A
@@ -52,7 +52,7 @@ git-prepare:
 update-data: data $(export_directory)
 	cd data && \
 		git pull origin master && \
-		make docs
+		make clean docs
 update-examples: $(export_directory)
 	rm -rf $(export_directory)/examples
 	script/examples.sh $(export_directory)
