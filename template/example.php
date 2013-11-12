@@ -14,7 +14,10 @@
 	?>
 	<!--Start of this page's content-->
 		<h2>$Name</h2>
-		<pre><code class="java"><?php include '$Codefile';?></code></pre>
+		<pre><code class="java"><?php
+			$content = file_get_contents( '$Codefile');
+			echo htmlspecialchars( $content);
+		?></code></pre>
 	<!--End of this page's content-->
 	<?php
 		include '../../include/footer.php';
