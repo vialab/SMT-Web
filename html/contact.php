@@ -15,7 +15,7 @@
 	<!--Start of this page's content-->
 		<h2>Contact</h2>
 		<p>
-			Email us at erik[dot]paluka[at]uoit[dot]ca
+			Email us at vialab[dot]smt[at]gmail[dot]com
 		</p>
 		<p>
 			If you have problems running SMT, first test that the Processing examples work (File->Examples->Basics), if they do no, check the troubleshooting page for solutions (<a href="http://wiki.processing.org/w/Troubleshooting">wiki.processing.org/w/Troubleshooting</a>).
