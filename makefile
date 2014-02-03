@@ -34,11 +34,10 @@ build: $(class_files)
 update: build $(export_directory) \
 		update-smt-repo \
 		update-examples \
-		update-reference
-	cp -a html/* $(export_directory)
-	cp -r smt-repo/javadoc $(export_directory)
-	cp smt-repo/library.properties $(export_directory)/dl/SMT.txt
-#	cp smt-repo/SMT.zip $(export_directory)/dl/
+		update-reference \
+		update-others
+
+push: push-localhost
 
 #extra commands
 clean-specials:
@@ -63,11 +62,14 @@ update-reference: $(export_directory) build
 		smt-repo/src/vialab/SMT/*.java \
 		smt-repo/src/vialab/SMT/event/*.java \
 		smt-repo/src/vialab/SMT/swipekeyboard/*.java \
-		smt-repo/src/vialab/SMT/test/*.java \
+		smt-repo/src/vialab/SMT/test/*.java
+update-others: smt-repo
+	cp -a html/* $(export_directory)
+	cp -r smt-repo/javadoc $(export_directory)
+	cp smt-repo/library.properties $(export_directory)/dl/SMT.txt
+#	cp smt-repo/SMT.zip $(export_directory)/dl/
 
 #push macros
 push-localhost:
 	sudo rm -rf /var/www/html/smt/*
 	sudo cp -r website/* /var/www/html/smt/
-push-kiwiheart:
-	scp -a website/* kiwiheart.ca:~/smt-web

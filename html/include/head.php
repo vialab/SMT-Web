@@ -5,9 +5,9 @@
 <link href="/smt/css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
 <link href="/smt/css/mainCSS.css" rel="stylesheet" media="screen">
 <?php
-	if(!isset($containsCode))
+	if( ! isset( $containsCode))
 		$containsCode = false;
-	if($containsCode){?>
+	if( $containsCode){?>
 		<script src="/smt/js/highlight.pack.js"></script>
 		<script>
 			hljs.tabReplace = '  '; 

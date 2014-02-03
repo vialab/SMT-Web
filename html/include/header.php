@@ -35,6 +35,10 @@
 	</div>
 	<div class="container-fluid">
 		<div class="row-fluid">
+	<?php
+		if( ! isset( $disableSideBar))
+			$disableSideBar = false;
+		if( ! $disableSideBar){?>
 			<div class="span3">
 				<div class="well sidebar-nav">
 					<ul class="nav nav-list">
@@ -43,4 +47,5 @@
 					</ul>
 				</div>
 			</div>
+	<?php } ?>
 			<div class="span7">
