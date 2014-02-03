@@ -1,12 +1,13 @@
 <?php
 	$_navlist = [
-		["","Home"],
-		["download.php","Download"],
-		["about.php","About"],
-		["tutorial.php","Tutorial"],
-		["reference.php","Reference"],
-		["examples.php","Examples"],
-		["contact.php","Contact"]];
+		[ "", "Home"],
+		[ "about.php", "About"],
+		[ "download.php", "Download"],
+		[ "tutorial.php", "Tutorial"],
+		[ "examples.php", "Examples"],
+		[ "reference.php", "Reference"],
+		[ "javadoc/", "Javadoc"],
+		[ "contact.php", "Contact"]];
 	function navlist( $thisPage){
 		global $thisPage, $_navlist;
 		foreach( $_navlist as $node){
@@ -28,7 +29,7 @@
 					<ul class="nav">
 						<?php navlist()?>
 					</ul>
-				</div><!--/.nav-collapse -->
+				</div>
 			</div>
 		</div>
 	</div>
@@ -40,6 +41,6 @@
 						<li class="nav-header">Pages</li>
 						<?php navlist()?>
 					</ul>
-				</div><!--/.well -->
-			</div><!--/span-->
+				</div>
+			</div>
 			<div class="span7">

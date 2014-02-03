@@ -1,4 +1,4 @@
-<title>Simple Multi-Touch (SMT) Toolkit <?php echo $title;?></title>
+<title>Simple Multi-Touch (SMT) Toolkit for Processing<?php echo $title;?></title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <!-- Bootstrap -->
 <link href="/smt/css/bootstrap.min.css" rel="stylesheet" media="screen">    

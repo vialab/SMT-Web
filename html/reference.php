@@ -4,7 +4,7 @@
 	<?php
 		$title = "[Reference]";
 		$containsCode = true;
-		include 'include/head.php';
+		include $_SERVER['DOCUMENT_ROOT'].'/smt/include/head.php';
 	?>
 	<style>
 		:first-child{margin-left:0}
@@ -13,12 +13,12 @@
 <body>
 	<?php
 		$thisPage = "Reference";
-		include 'include/header.php';
+		include $_SERVER['DOCUMENT_ROOT'].'/smt/include/header.php';
 	?>
 	<!--Start of this page's content-->
 		<h2>Reference</h2>
 		<p>
-			Check out the Simple Multi-Touch <a href="http://vialab.github.io/SMT">JavaDoc.</a>
+			Check out the Simple Multi-Touch <a href="/smt/javadoc">JavaDoc.</a>
 		</p>
 		<p>
 			Check out the processing API at <a href="http://processing.org/reference/">processing.org/reference/</a>.
@@ -37,7 +37,7 @@
 		</div><!--/row-->
 	<!--End of this page's content-->
 	<?php
-		include 'include/footer.php';
+		include $_SERVER['DOCUMENT_ROOT'].'/smt/include/footer.php';
 	?>
 </body>
 </html>

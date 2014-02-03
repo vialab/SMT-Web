@@ -8,7 +8,7 @@ freshen: clean build
 #variables
 cp = -cp src:bin:lib/*
 dest = -d bin
-docscp = -classpath data/src:data/bin:data/lib/*:data/lib/processing/*
+docscp = -classpath smt-repo/src:smt-repo/bin:smt-repo/lib/*:smt-repo/lib/processing/*
 export_directory = website
 version = 
 #warnings = -Xlint:-options
@@ -24,21 +24,21 @@ $(class_files): bin/%.class : src/%.java
 $(export_directory):
 	mkdir -p $@
 
-data:
+smt-repo:
 	git clone git@github.com:vialab/SMT.git \
-		-b master data
+		-b master smt-repo
 
 #basic commands
 build: $(class_files)
 
 update: build $(export_directory) \
-		update-data \
+		update-smt-repo \
 		update-examples \
 		update-reference
 	cp -a html/* $(export_directory)
-	cp -r data/javadoc $(export_directory)
-	cp data/library.properties $(export_directory)/dl/SMT.txt
-#	cp data/SMT.zip $(export_directory)/dl/
+	cp -r smt-repo/javadoc $(export_directory)
+	cp smt-repo/library.properties $(export_directory)/dl/SMT.txt
+#	cp smt-repo/SMT.zip $(export_directory)/dl/
 
 #extra commands
 clean-specials:
@@ -49,8 +49,8 @@ git-prepare:
 	git add -u
 
 #update macros
-update-data: data $(export_directory)
-	cd data && \
+update-smt-repo: smt-repo
+	cd smt-repo && \
 		git pull origin master && \
 		make clean docs
 update-examples: $(export_directory)
@@ -60,14 +60,14 @@ update-reference: $(export_directory) build
 	rm -rf $(export_directory)/reference
 	javadoc -doclet vialab.SMT.website.SMTDoclet -docletpath bin -public \
 		$(docscp) \
-		data/src/vialab/SMT/*.java \
-		data/src/vialab/SMT/event/*.java \
-		data/src/vialab/SMT/test/*.java \
-		data/src/vialab/SMT/zone/*.java
+		smt-repo/src/vialab/SMT/*.java \
+		smt-repo/src/vialab/SMT/event/*.java \
+		smt-repo/src/vialab/SMT/swipekeyboard/*.java \
+		smt-repo/src/vialab/SMT/test/*.java \
 
 #push macros
 push-localhost:
 	sudo rm -rf /var/www/html/smt/*
-	sudo cp -a website/* /var/www/html/smt/
+	sudo cp -r website/* /var/www/html/smt/
 push-kiwiheart:
 	scp -a website/* kiwiheart.ca:~/smt-web
