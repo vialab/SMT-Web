@@ -4,44 +4,41 @@
 	<?php
 		$title = "[Download]";
 		$containsCode = true;
-		include $_SERVER['DOCUMENT_ROOT'].'/smt/include/head.php';
+		include 'include/head.php';
 	?>
 </head>
 <body>
 	<?php
 		$thisPage = "Download";
-		include $_SERVER['DOCUMENT_ROOT'].'/smt/include/header.php';
+		include 'include/header.php';
 	?>
 	<!--Start of this page's content-->
 		<h2>Download</h2>
-		<span>The last time SMT was updated on GitHub was </span>
-		<span id="lastUpdate"></span><br><br>
 		<p>
-			To download the Simple Multi-Touch toolkit, open the Library Manager in Processing. Change the Category to I/O and look for <strong>Simple Multi-Touch (SMT)</strong>.  Once found, click the install button.
+			<b>Warning: SMT does not work with processing 2.1.1. We are working on resolving the conflict for the next release of processing and SMT.</b>
 		</p>
-		<p>
-			Alternatively, <a href="/smt/dl.php?file=/smt/dl/SMT.zip">you can download a .zip file here.</a>
-		</p>
-		<p>
+		<p>To download the Simple Multi-Touch toolkit, open the Library Manager in Processing. Change the Category to I/O and look for <strong>Simple Multi-Touch (SMT)</strong>.  Once found, click the install button.
+			<br>
+			Alternatively, <a href="dl/SMT.zip">you can download a .zip file here.</a> <br><br>
 			We are actively developing the toolkit, therefore to get the latest version, you can update using the Processing IDE, download the newest version from GitHub, or download the .zip file above.
+			<br>
+			For the source code, you can visit the <a href="https://github.com/vialab/SMT" target="_blank">GitHub page</a>.
 		</p>
-		<p>
-			For the source code, you can visit the <a href="https://github.com/vialab/SMT">GitHub page</a>.
-		</p>
+		<br>
 		<div class="row-fluid">
 			<div class="span12">
-				<a href="/smt/img/addLibProcessing.jpg">
-					<img class="imgDownload" src="/smt/img/addLibProcessing.jpg">
+				<a href="img/addLibProcessing.jpg">
+					<img class="imgDownload" src="img/addLibProcessing.jpg">
 				</a>
-				<a href="/smt/img/installSMTProcessing.jpg">
-					<img class="imgDownload" src="/smt/img/installSMTProcessing.jpg">
+				<a href="img/installSMTProcessing.jpg">
+					<img class="imgDownload" src="img/installSMTProcessing.jpg">
 				</a>
 			</div>
 		</div>
 	<!--End of this page's content-->
 	<?php
-		include $_SERVER['DOCUMENT_ROOT'].'/smt/include/footer.php';
+		include 'include/footer.php';
 	?>
-	<script src="/smt/js/SMTUpdate.js"></script>
+	<script src="js/SMTUpdate.js"></script>
 </body>
 </html>
