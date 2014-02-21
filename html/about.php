@@ -32,7 +32,7 @@
 		</p>
 		<p>
 			Check out the lab website for SMT - <a href="http://vialab.science.uoit.ca/portfolio/smt-toolkit">vialab.science.uoit.ca/portfolio/smt-toolkit</a>. 
-			The Simple Multi-Touch initiative was started in 2011 through a collaboration of people at the <a href="http://www.uoit.ca">University of Ontario Insitute of Technology</a> and the <a href="http://www.uwaterloo.ca">University of Waterloo</a>. These people include <a href="http://www.erikpaluka.com">Erik Paluka</a>, <a href="http://vialab.science.uoit.ca/portfolio/zachary-cook">Zachary Cook</a>, <a href="http://markhancock.ca/">Dr. Mark Hancock</a>, and <a href="http://vialab.science.uoit.ca">Dr. Christopher Collins</a>.
+			The Simple Multi-Touch initiative was started in 2011 through a collaboration of people at the <a href="http://www.uoit.ca">University of Ontario Insitute of Technology</a> and the <a href="http://www.uwaterloo.ca">University of Waterloo</a>. The current list of contributors includes <a href="http://www.erikpaluka.com">Erik Paluka</a>, <a href="http://vialab.science.uoit.ca/portfolio/kalev-kalda-sikes">Kalev Kalda Sikes</a>, <a href="http://vialab.science.uoit.ca/portfolio/zachary-cook">Zachary Cook</a>, <a href="http://vialab.science.uoit.ca">Dr. Christopher Collins</a>, and <a href="http://markhancock.ca/">Dr. Mark Hancock</a>.
 		</p>
 	<!--End of this page's content-->
 	<?php
