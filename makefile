@@ -48,9 +48,9 @@ git-prepare:
 	git add -u
 
 #update macros
-update-smt-repo: smt-repo
+update-smt-repo:
 	cd smt-repo && \
-		git pull origin master && \
+		##git pull origin master && \
 		make clean docs
 update-examples: $(export_directory)
 	rm -rf $(export_directory)/examples

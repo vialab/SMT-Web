@@ -35,21 +35,31 @@
 		<div class="row-fluid">
 			<div class="span6">
 				<h2>Contributors Welcome!</h2>
-				<p>Simple Multi-Touch is open source and we are looking for people to contribute to our library. If you want to help us make multi-touch even easier to use with Processing, then check out our
-					<a href="https://github.com/vialab/SMT">GitHub page</a> and contact us by email!
+				<p>
+					Simple Multi-Touch is open source and open to new contributors. If you want to help us make multi-touch even easier to use with Processing, check out our <a href="https://github.com/vialab/SMT">Github page</a> and contact us by email!
 				</p>
 			</div>
 			<div class="span6">
 				<h2>News</h2>
 				<p>
+					<b>09/2013</b>
+					<br>
+					Kalev Kalda Sikes was hired as a SurfNet intern. As part of this new role he has taken over SMT's maintenance and active development.
+				</p>
+				<p>
 					<b>06/2013</b>
-					<br>Zach and Erik gave a tutorial on Simple Multi-Touch at SurfNet 2013 in Calgary, Alberta, Canada</p>
+					<br>
+					Zach and Erik gave a tutorial on Simple Multi-Touch at SurfNet 2013 in Calgary, Alberta, Canada
+				</p>
 				<p>
 					<b>04/2013</b>
-					<br>Simple Multi-Touch was accepted as an Official Contributed Library to Processing</p>
+					<br>
+					Simple Multi-Touch was accepted as an Official Contributed Library to Processing
+				</p>
 				<p>
 					<b>09/2012</b>
-					<br>Zach and Erik gave a tutorial on Simple Multi-Touch at SurfNet 2012 in Kitchener, Ontario, Canada
+					<br>
+					Zach and Erik gave a tutorial on Simple Multi-Touch at SurfNet 2012 in Kitchener, Ontario, Canada
 				</p>
 			</div>
 		</div>
