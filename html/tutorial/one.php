@@ -84,7 +84,7 @@ void touchMyZone(Zone zone){
 
 		<h4>Next Tutorial</h4>
 		<p>
-			<a href="/smt/tutorial/two.php">Tutorial 2 - TouchDown, TouchUp and Press</a>
+			<a href="/smt/tutorial/two.php">Coming Soon: Tutorial 2 - TouchDown, TouchUp and Press</a>
 		</p>
 
 		<h4>Entire Source Code for Tutorial: 

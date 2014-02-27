@@ -23,12 +23,12 @@
 		<h3>
 		<h3>
 			<a href="tutorial/two.php">
-				Tutorial 2 - TouchDown, TouchUp and Press
+				Coming Soon: Tutorial 2 - TouchDown, TouchUp and Press
 			</a>
 		<h3>
 		<h3>
 			<a href="tutorial/three.php">
-				Tutorial 3 - Parent and Child Zones
+				Coming Soon: Tutorial 3 - Parent and Child Zones
 			</a>
 		<h3>
 	<!--End of this page's content-->
