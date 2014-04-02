@@ -18,7 +18,7 @@
 			Email us at vialab[dot]smt[at]gmail[dot]com
 		</p>
 		<p>
-			If you have problems running SMT, first test the Processing examples (File -> Examples -> Basics). If you have problems with them, have a look at processing's troubleshooting page for solutions: <a href="http://wiki.processing.org/w/Troubleshooting">wiki.processing.org/w/Troubleshooting</a>.
+			If you have problems running SMT, first test the Processing examples ( File -> Examples -> Basics ). If you have problems with them, have a look at processing's troubleshooting page for solutions: <a href="http://wiki.processing.org/w/Troubleshooting">wiki.processing.org/w/Troubleshooting</a>.
 		</p>
 		<p>
 			Next, try contacting the communities at <a href="http://reddit.com/r/processing">/r/processing</a>, and <a href="http://reddit.com/r/SimpleMultiTouch">/r/SimpleMultiTouch</a>. Other users and the developers hang out there, and would be happy to assist you.

@@ -28,7 +28,7 @@
 			</ul>
 		</p>
 		<p>
-			It can either be used in the Processing IDE, or in a Java IDE such as eclipse. The only requirement to use SMT within a Java application is the Processing library files, as well as the SMT jar file.
+			It can either be used in the Processing IDE, or in a Java IDE such as Eclipse. The only requirement to use SMT within a Java application is the Processing library files, as well as the SMT jar file. Check out <a href="http://processing.org/tutorials/eclipse/">this tutorial on using Processing in Eclipse</a>.
 		</p>
 		<p>
 			Check out the lab website for SMT - <a href="http://vialab.science.uoit.ca/portfolio/smt-toolkit">vialab.science.uoit.ca/portfolio/smt-toolkit</a>. 
