@@ -32,10 +32,10 @@
 		<div class="row-fluid">
 			<div class="span12">
 				<a href="img/addLibProcessing.jpg">
-					<img class="imgDownload" src="img/addLibProcessing.jpg">
+					<img class="imgDownload" src="img/add_lib.png">
 				</a>
 				<a href="img/installSMTProcessing.jpg">
-					<img class="imgDownload" src="img/installSMTProcessing.jpg">
+					<img class="imgDownload" src="img/install_smt.png">
 				</a>
 			</div>
 		</div>
