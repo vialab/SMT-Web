@@ -60,7 +60,7 @@ void pickDrawMyZone(Zone zone){
 	rect(0, 0, 100, 100);
 }</code></pre>
 		<p>
-			This function works in the same way as the <code>drawMyZone()</code> function. Instead of drawing to the screen, however, it draws to something called a "pick buffer". Think of this as defining the touchable area for a Zone. Generally, one can use the same code as the draw function. Similarly to the draw function, the function must be named <code>pickDraw[Zone name]</code>. If you're curious about how SMT uses this function, read <a href="http://wiki.processing.org/w/Picking_with_a_color_buffer">this processing tutorial</a>.
+			This function works in the same way as the <code>drawMyZone()</code> function. Instead of drawing to the screen, however, it draws to something called a "pick buffer". Think of this as defining the touchable area for a Zone. Generally, one can use the same code as the draw function. Similarly to the draw function, the function must be named <code>pickDraw[Zone name]</code>. If you're curious about how SMT uses this function, read <a href="http://wiki.processing.org/w/Picking_with_a_color_buffer">this processing tutorial</a>. SMT actually has a default pick draw method that is usually sufficient. This means that you don't always have write a pickDraw method for your zones. If you remove this function from the code of this tutorial, it'll still run exactly the same.
 		</p>
 
 		<h4>Handling Touches</h4>
