@@ -32,7 +32,6 @@ smt-repo:
 build: $(class_files)
 
 update: build $(export_directory) \
-		update-smt-repo \
 		update-examples \
 		update-reference \
 		update-others
@@ -48,28 +47,21 @@ git-prepare:
 	git add -u
 
 #update macros
-update-smt-repo:
-	cd smt-repo && \
-		##git pull origin master && \
-		make clean docs
 update-examples: $(export_directory)
 	rm -rf $(export_directory)/examples
 	script/examples.sh $(export_directory)
 update-reference: $(export_directory) build
 	rm -rf $(export_directory)/reference
 	javadoc -doclet vialab.SMT.website.SMTDoclet -docletpath bin -public \
-		$(docscp) \
-		smt-repo/src/vialab/SMT/*.java \
-		smt-repo/src/vialab/SMT/event/*.java \
-		smt-repo/src/vialab/SMT/swipekeyboard/*.java \
-		smt-repo/src/vialab/SMT/test/*.java
-update-others: smt-repo
+		$(docscp) $$(find smt-repo/src -name *.java)
+update-others:
 	cp -a html/* $(export_directory)
 	cp -r smt-repo/javadoc $(export_directory)
 	cp smt-repo/library.properties $(export_directory)/dl/SMT.txt
-#	cp smt-repo/SMT.zip $(export_directory)/dl/
+	cp smt-repo/SMT.zip $(export_directory)/dl/
 
 #push macros
 push-localhost:
+	sudo mkdir -p /var/www/html/smt/
 	sudo rm -rf /var/www/html/smt/*
 	sudo cp -r website/* /var/www/html/smt/
