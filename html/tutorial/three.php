@@ -18,21 +18,37 @@
 		</h2>
 		<h4>Introduction</h4>
 		<p>
-			This is an introductory tutorial. It assumes that the reader knows basic processing and has read the previous tutorials, but no more.
+			This is an introductory tutorial. It assumes that the reader knows basic processing and has read the previous tutorial, but no more.
 		</p>
 		<p>
-			The Simple Multi-Touch toolkit, also known as SMT, makes using multi-touch interactions in sketches easy. In this tutorial, we will walk though the absolute basics of SMT and how to get started with making your own multi-touch applications.
+			More complicated interfaces require some form of element nesting. Basically, this means that a ui element can be contained by other ui elements. SMT's answer to this is zone nesting. Any zone can have any nubmer of children, which inherit their parent's transformation matrix. This means that if you move the parent around, the child will move with it.
 		</p>
 
-		<h4>Heading</h4>
-<pre><code class="java">code();</code></pre>
+		<h4>Setup</h4>
+<pre><code class="java">//Make a new Zone
+Zone zone = new Zone( "MyZone");
+SMT.add( zone);
+zone.translate( 100, 100);
+
+//Make a child Zone
+Zone child = new Zone( "ChildZone");
+zone.add( child);
+child.translate( 100, 100);
+
+//Make a grandchild Zone
+Zone grandchild = new Zone( "GrandChildZone");
+child.add( grandchild);
+grandchild.translate( 50, 50);</code></pre>
 		<p>
-			text.
+			Here we make a few zones, and add them into each other. "ChildZone" is added to "MyZone", effectively making it a child of "MyZone", and "GrandChildZone" is added to "ChildZone", making it a child of "ChildZone".
 		</p>
 
 		<h4>Result</h4>
 		<p>
-			This is what you should see when running this tutorial's code in processing.
+			This is what you could see when running this tutorial's code in processing, after some rotation of the zones.
+		</p>
+		<p>
+			"MyZone" is drawn blue, "ChildZone" is drawn green, and "GrandChildZone" is drawn purple.
 		</p>
 		<img class="img-thumbnail" style="margin: 0 auto; display:block"
 			src="/smt/img/tutorial3.png" alt="Tutorial 3 Screenshot">

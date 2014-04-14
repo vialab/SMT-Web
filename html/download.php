@@ -21,7 +21,7 @@
 			Alternatively, <a href="dl/SMT.zip">you can download a zip here.</a>
 		</p>
 		<p>
-			<b>Warning: SMT does not work with Processing 2.1.1. We are working on resolving the conflict in the next release of SMT (v4.0).</b>
+			Warning: SMT currently only works with Processing 2.1.1+. For older versions of processing, download <a href="https://github.com/vialab/SMT/releases/tag/v3.8">SMT 3.8.</a>
 		</p>
 			We are actively developing the toolkit, therefore to get the latest version, you can update using the Processing IDE, download the newest version from GitHub, or download the .zip file above.
 		</p>
