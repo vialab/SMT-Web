@@ -14,7 +14,7 @@
 	?>
 	<!--Start of this page's content-->
 		<h2>
-			Tutorial [ <a href="/smt/tutorial/one.php">1</a> | 2 | <a href="/smt/tutorial/three.php">3</a> ]
+			Tutorial [ <a href="/smt/tutorial/one.php">1</a> | 2 | <a href="/smt/tutorial/three.php">3</a> | <a href="/smt/tutorial/four.php">4</a> ]
 		</h2>
 		<h4>Introduction</h4>
 		<p>

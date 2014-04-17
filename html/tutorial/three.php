@@ -14,7 +14,7 @@
 	?>
 	<!--Start of this page's content-->
 		<h2>
-			Tutorial [ <a href="/smt/tutorial/one.php">1</a> | <a href="/smt/tutorial/two.php">2</a> | 3 ]
+			Tutorial [ <a href="/smt/tutorial/one.php">1</a> | <a href="/smt/tutorial/two.php">2</a> | 3 | <a href="/smt/tutorial/four.php">4</a> ]
 		</h2>
 		<h4>Introduction</h4>
 		<p>
@@ -52,6 +52,11 @@ grandchild.translate( 50, 50);</code></pre>
 		</p>
 		<img class="img-thumbnail" style="margin: 0 auto; display:block"
 			src="/smt/img/tutorial3.png" alt="Tutorial 3 Screenshot">
+
+		<h4>Next Tutorial</h4>
+		<p>
+			<a href="/smt/tutorial/four.php">Tutorial 4 - Touch Functions</a>
+		</p>
 
 		<h4>Entire Source Code for Tutorial: 
 			<a href="/smt/dl.php?file=/smt/examples/Tutorial/Three/Three.pde">Download</a>

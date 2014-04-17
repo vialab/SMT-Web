@@ -14,7 +14,7 @@
 	?>
 	<!--Start of this page's content-->
 		<h2>
-			Tutorials
+			Introductory Tutorials
 		</h2>
 		<h3>
 			<a href="tutorial/one.php">
@@ -29,6 +29,20 @@
 		<h3>
 			<a href="tutorial/three.php">
 				Tutorial 3 - Parent and Child Zones
+			</a>
+		<h3>
+		<h3>
+			<a href="tutorial/four.php">
+				Tutorial 4 - Touch Functions
+			</a>
+		<h3>
+		<br/>
+		<h2>
+			Other Tutorials
+		</h2>
+		<h3>
+			<a href="tutorial/touchcolours.php">
+				Tutorial - Setting Touch and Trail Colours
 			</a>
 		<h3>
 	<!--End of this page's content-->
