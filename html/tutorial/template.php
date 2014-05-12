@@ -14,7 +14,7 @@
 	?>
 	<!--Start of this page's content-->
 		<h2>
-			Setting Touch and Trail Colours
+			Tutorial Title
 		</h2>
 		<h4>Introduction</h4>
 		<p>

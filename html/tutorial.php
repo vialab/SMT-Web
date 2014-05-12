@@ -55,7 +55,7 @@
 			<h3>
 			<h3>
 				<a href="tutorial/swipekeyboard.php">
-					Introducing the SwipeKeyboard Zone
+					Introducing the Swipe Keyboard Zone
 				</a>
 			<h3>
 		</div>
@@ -65,7 +65,7 @@
 		</h2>
 		<div>
 			<h3>
-				<a href="tutorial/touchbindings.php">
+				<a href="tutorial/touchsourcebounds.php">
 					Customizing Touch Source Bounds
 				</a>
 			<h3>

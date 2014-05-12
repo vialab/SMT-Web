@@ -14,7 +14,7 @@
 	?>
 	<!--Start of this page's content-->
 		<h2>
-			Setting Touch and Trail Colours
+			Customizing Touch Source Bounds
 		</h2>
 		<h4>Introduction</h4>
 		<p>
@@ -31,12 +31,12 @@
 		</p>
 
 		<h4>Entire Source Code for Tutorial: 
-			<a href="/smt/dl.php?file=/smt/examples/Demos/Template/Template.pde">
+			<a href="/smt/dl.php?file=/smt/examples/Tutorial/TouchSourceBounds/TouchSourceBounds.pde">
 				Download
 			</a>
 		</h4>
 		<pre><code class="java"><?php
-			include $_SERVER['DOCUMENT_ROOT'].'/smt/examples/Demos/Template/Template.pde';
+			include $_SERVER['DOCUMENT_ROOT'].'/smt/examples/Tutorial/TouchSourceBounds/TouchSourceBounds.pde';
 		?></code></pre>
 	<!--End of this page's content-->
 	<?php
