@@ -16,35 +16,65 @@
 		<h2>
 			Introductory Tutorials
 		</h2>
-		<h3>
-			<a href="tutorial/one.php">
-				Tutorial 1 - Getting Started
-			</a>
-		<h3>
-		<h3>
-			<a href="tutorial/two.php">
-				Tutorial 2 - TouchDown, TouchUp and Press
-			</a>
-		<h3>
-		<h3>
-			<a href="tutorial/three.php">
-				Tutorial 3 - Parent and Child Zones
-			</a>
-		<h3>
-		<h3>
-			<a href="tutorial/four.php">
-				Tutorial 4 - Touch Functions
-			</a>
-		<h3>
+		<div>
+			<h3>
+				<a href="tutorial/one.php">
+					Tutorial 1 - Getting Started
+				</a>
+			<h3>
+			<h3>
+				<a href="tutorial/two.php">
+					Tutorial 2 - TouchDown, TouchUp and Press
+				</a>
+			<h3>
+			<h3>
+				<a href="tutorial/three.php">
+					Tutorial 3 - Parent and Child Zones
+				</a>
+			<h3>
+			<h3>
+				<a href="tutorial/four.php">
+					Tutorial 4 - Touch Functions
+				</a>
+			<h3>
+		</div>
 		<br/>
 		<h2>
 			Other Tutorials
 		</h2>
-		<h3>
-			<a href="tutorial/touchcolours.php">
-				Tutorial - Setting Touch and Trail Colours
-			</a>
-		<h3>
+		<div>
+			<h3>
+				<a href="tutorial/touchcolours.php">
+					Setting Touch and Trail Colours
+				</a>
+			<h3>
+			<h3>
+				<a href="tutorial/java.php">
+					Working with SMT in Java
+				</a>
+			<h3>
+			<h3>
+				<a href="tutorial/swipekeyboard.php">
+					Introducing the SwipeKeyboard Zone
+				</a>
+			<h3>
+		</div>
+		<br/>
+		<h2>
+			Advanced Tutorials
+		</h2>
+		<div>
+			<h3>
+				<a href="tutorial/touchbindings.php">
+					Customizing Touch Source Bounds
+				</a>
+			<h3>
+			<h3>
+				<a href="tutorial/viewports.php">
+					Working with Viewports
+				</a>
+			<h3>
+		</div>
 	<!--End of this page's content-->
 	<?php
 		include $_SERVER['DOCUMENT_ROOT'].'/smt/include/footer.php';
