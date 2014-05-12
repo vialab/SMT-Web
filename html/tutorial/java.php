@@ -31,12 +31,12 @@
 		</p>
 
 		<h4>Entire Source Code for Tutorial: 
-			<a href="/smt/dl.php?file=/smt/examples/Tutorial/Java/Java.pde">
+			<a href="/smt/dl.php?file=/smt/examples/Advanced/Java/Java.pde">
 				Download
 			</a>
 		</h4>
 		<pre><code class="java"><?php
-			include $_SERVER['DOCUMENT_ROOT'].'/smt/examples/Tutorial/Java/Java.pde';
+			include $_SERVER['DOCUMENT_ROOT'].'/smt/examples/Advanced/Java/Java.pde';
 		?></code></pre>
 	<!--End of this page's content-->
 	<?php
