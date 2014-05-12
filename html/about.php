@@ -19,7 +19,7 @@
 			computing accessible to non-experts, and to facilitate rapid prototyping of interactive applications.
 		</p>
 		<p>
-			SMT currently supports 
+			SMT can be used in Windows, Mac and GNU/Linux environments. It supports multiple input sources for touch events:
 			<ul>
 				<li>Windows Touch,</li>
 				<li>Leap Motion (on Windows),</li>
