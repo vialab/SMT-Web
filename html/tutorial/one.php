@@ -34,7 +34,7 @@ SMT.init( this, TouchSource.MULTIPLE);</code></pre>
 			Whenever using SMT, <code>SMT.init()</code> must be called. It must be called after <code>size()</code>. Here we use the displayWidth and displayHeight values, intending for the sketch to be run full-screen. To run a sketch in full-screen mode with processing's IDE, click Sketch -> Present in the menu bar, or hit the keys Control + Shift + R.
 		</p>
 		<p>
-			SMT only a custom renderer, so the third parameter in <code>size()</code> must be <code>SMT.RENDERER</code>. There are multiple possible values for the second parameter of <code>SMT.init()</code>, but for now, we'll just use <code>TouchSource.AUTOMATIC</code> to automatically detect the source.
+			SMT can only work with a custom renderer, so the third parameter in <code>size()</code> must be <code>SMT.RENDERER</code>. There are multiple possible values for the second parameter of <code>SMT.init()</code>, but for now, we'll just use <code>TouchSource.AUTOMATIC</code> to automatically detect touch sources.
 		</p>
 
 		<h4>Making a Zone</h4>
@@ -42,7 +42,7 @@ SMT.init( this, TouchSource.MULTIPLE);</code></pre>
 Zone zone = new Zone( "MyZone");
 SMT.add( zone);</code></pre>
 		<p>
-			The Zone could be considered the central concept of SMT. A Zone is a drawable area that can be touched. The name of the Zone is very important. In this case, we've named the Zone <code class="java">"MyZone"</code>.
+			The Zone could be considered the central concept of SMT. A Zone is a drawable area that can be touched. The name of the Zone is very important. In this case, we've named the Zone <code>"MyZone"</code>.
 		</p>
 
 		<h4>Drawing a Zone</h4>
@@ -51,7 +51,7 @@ void drawMyZone(Zone zone){
 	rect(0, 0, 100, 100);
 }</code></pre>
 		<p>
-			This function defines how any Zone with the name <code class="java">"MyZone"</code> is drawn. If the Zone was named <code class="java">"SpecialZone"</code>, this function would have to be defined as <code class="java">void drawSpecialZone( Zone zone){}</code>. In other words, to draw a zone, make a function named <code class="java">draw[Zone name]</code>.
+			This function defines how any Zone with the name <code class="java">"MyZone"</code> is drawn. If the Zone was named <code>"SpecialZone"</code>, this function would have to be defined as <code>void drawSpecialZone( Zone zone){}</code>. In other words, to draw a zone, make a function named <code>draw[Zone name]</code>.
 		</p>
 
 		<h4>Detecting Touches</h4>
@@ -60,7 +60,7 @@ void pickDrawMyZone(Zone zone){
 	rect(0, 0, 100, 100);
 }</code></pre>
 		<p>
-			This function works in the same way as the <code class="java">drawMyZone()</code> function. Instead of drawing to the screen, however, it draws to something called a "pick buffer". Think of this as defining the touchable area for a Zone. Generally, one can use the same code as the draw function. Similarly to the draw function, the function must be named <code class="java">pickDraw[Zone name]</code>. If you're curious about how SMT uses this function, read <a href="http://wiki.processing.org/w/Picking_with_a_color_buffer">this processing tutorial</a>. SMT actually has a default pick draw method that is usually sufficient. This means that you don't always have write a pickDraw method for your zones. If you remove this function from the code of this tutorial, it'll still run exactly the same.
+			This function works in the same way as the <code>drawMyZone()</code> function. Instead of drawing to the screen, however, it draws to something called a "pick buffer". Think of this as defining the touchable area for a Zone. Generally, one can use the same code as the draw function. Similarly to the draw function, the function must be named <code>pickDraw[Zone name]</code>. If you're curious about how SMT uses this function, read <a href="http://wiki.processing.org/w/Picking_with_a_color_buffer">this processing tutorial</a>. SMT actually has a default pick draw method that is usually sufficient. This means that you don't always have write a pickDraw method for your zones. If you remove this function from the code of this tutorial, it'll still run exactly the same.
 		</p>
 
 		<h4>Handling Touches</h4>
@@ -69,7 +69,7 @@ void touchMyZone(Zone zone){
 	zone.drag();
 }</code></pre>
 		<p>
-			This function defines what to do when a Zone is being touched. It must be named <code class="java">touch[Zone name]</code>. There are a number of built-in touch functions available, such as <code class="java">.drag()</code>, which is used in this example, <code class="java">.rotate()</code>, <code class="java">.scale()</code>, <code class="java">.rst()</code>, <code class="java">.rnt()</code>, <code class="java">.rs()</code>, and more. Each of these have many parameters avaiable, to customize the behavior. If none of the built-in functions are suitable, it is possible to code custom behavior, but this is outside the scope of this tutorial.
+			This function defines what to do when a Zone is being touched. It must be named <code>touch[Zone name]</code>. There are a number of built-in touch functions available, such as <code>.drag()</code>, which is used in this example, <code>.rotate()</code>, <code>.scale()</code>, <code class="java">.rst()</code>, <code>.rnt()</code>, <code>.rs()</code>, and more. Each of these have many parameters avaiable, to customize the behavior. If none of the built-in functions are suitable, it is possible to code custom behavior, but this is outside the scope of this tutorial.
 		</p>
 
 		<h4>Result</h4>
