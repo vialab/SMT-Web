@@ -29,7 +29,7 @@
 void setup(){
 //SMT and Processing setup
 size(displayWidth, displayHeight, SMT.RENDERER);
-SMT.init( this, TouchSource.MULTIPLE);</code></pre>
+SMT.init( this, TouchSource.AUTOMATIC);</code></pre>
 		<p>
 			Whenever using SMT, <code>SMT.init()</code> must be called. It must be called after <code>size()</code>. Here we use the displayWidth and displayHeight values, intending for the sketch to be run full-screen. To run a sketch in full-screen mode with processing's IDE, click Sketch -> Present in the menu bar, or hit the keys Control + Shift + R.
 		</p>
@@ -51,7 +51,7 @@ void drawMyZone(Zone zone){
 	rect(0, 0, 100, 100);
 }</code></pre>
 		<p>
-			This function defines how any Zone with the name <code class="java">"MyZone"</code> is drawn. If the Zone was named <code>"SpecialZone"</code>, this function would have to be defined as <code>void drawSpecialZone( Zone zone){}</code>. In other words, to draw a zone, make a function named <code>draw[Zone name]</code>.
+			This function defines how any Zone with the name <code>"MyZone"</code> is drawn. If the Zone was named <code>"SpecialZone"</code>, this function would have to be defined as <code>void drawSpecialZone( Zone zone){}</code>. In other words, to draw a zone, make a function named <code>draw[Zone name]</code>.
 		</p>
 
 		<h4>Detecting Touches</h4>
@@ -69,7 +69,7 @@ void touchMyZone(Zone zone){
 	zone.drag();
 }</code></pre>
 		<p>
-			This function defines what to do when a Zone is being touched. It must be named <code>touch[Zone name]</code>. There are a number of built-in touch functions available, such as <code>.drag()</code>, which is used in this example, <code>.rotate()</code>, <code>.scale()</code>, <code class="java">.rst()</code>, <code>.rnt()</code>, <code>.rs()</code>, and more. Each of these have many parameters avaiable, to customize the behavior. If none of the built-in functions are suitable, it is possible to code custom behavior, but this is outside the scope of this tutorial.
+			This function defines what to do when a Zone is being touched. It must be named <code>touch[Zone name]</code>. There are a number of built-in touch functions available, such as <code>.drag()</code>, which is used in this example, <code>.rotate()</code>, <code>.scale()</code>, <code>.rst()</code>, <code>.rnt()</code>, <code>.rs()</code>, and more. Each of these have many parameters avaiable, to customize the behavior. If none of the built-in functions are suitable, it is possible to code custom behavior, but this is outside the scope of this tutorial.
 		</p>
 
 		<h4>Result</h4>

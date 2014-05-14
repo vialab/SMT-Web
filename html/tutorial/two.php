@@ -21,7 +21,7 @@
 			This is an introductory tutorial. It assumes that the reader knows basic processing and has read the previous tutorial, but no more.
 		</p>
 		<p>
-			Sometimes, you may want greater control over what happens when a user touches a zone. The <code class="java">touchUp();</code>, <code class="java">touchDown();</code>, and <code class="java">press();</code> functions allow you to do just that.
+			You were already introduced to the 'normal' <code>touch()</code> function in the pre. Sometimes, you may want greater control over what happens when a user touches a zone. The <code>touchUp()</code>, <code>touchDown()</code>, and <code>press()</code> functions allow you to do just that.
 		</p>
 
 		<h4>Setup</h4>
@@ -63,7 +63,7 @@ void pressMyOtherZone( Zone zone){
 			This function is a little special. It's used to emulate button-like behavior. Normally when a touch leaves a zone, it stays assigned to that zone. If a press method is defined for a zone, like our "MyOtherZone", touches are unassigned from that zone when they leave it. The press method is only called when a touch goes up while its still assigned to the zone.
 		</p>
 		<p>
-			 To really understand how the press method works, try it out in the example - touch inside the second zone, then release outside it. Then try the opposite. The color variable is set to green when "MyOtherZone" is pressed.
+			 To really understand how the press method works, try it out in the example - touch inside the second zone, then release outside it. Then try it the other way around. The color variable is set to green when "MyOtherZone" is pressed.
 		</p>
 
 		<h3>Result</h3>

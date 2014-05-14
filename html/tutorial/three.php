@@ -21,7 +21,7 @@
 			This is an introductory tutorial. It assumes that the reader knows basic processing and has read the previous tutorial, but no more.
 		</p>
 		<p>
-			More complicated interfaces require some form of element nesting. Basically, this means that a ui element can be contained by other ui elements. SMT's answer to this is zone nesting. Any zone can have any nubmer of children, which inherit their parent's transformation matrix. This means that if you move the parent around, the child will move with it.
+			More complicated interfaces require some form of element nesting. Basically, this means that a ui element can be contained by other ui elements. SMT's answer to this is zone nesting. Any zone can have any number of children, which inherit their parent's transformation matrix. This means that if you move the parent around, the child will move with it.
 		</p>
 
 		<h4>Setup</h4>
