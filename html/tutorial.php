@@ -44,8 +44,8 @@
 		</h2>
 		<div>
 			<h3>
-				<a href="tutorial/touchcolours.php">
-					Setting Touch and Trail Colours
+				<a href="tutorial/touchdraw.php">
+					Customizing Touch Drawing Options
 				</a>
 			</h3>
 			<h3>
