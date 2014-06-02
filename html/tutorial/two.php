@@ -21,7 +21,7 @@
 			This is an introductory tutorial. It assumes that the reader knows basic processing and has read the previous tutorial, but no more.
 		</p>
 		<p>
-			You were already introduced to the 'normal' <code>touch()</code> function in the pre. Sometimes, you may want greater control over what happens when a user touches a zone. The <code>touchUp()</code>, <code>touchDown()</code>, and <code>press()</code> functions allow you to do just that.
+			You were already introduced to the 'normal' <code>touch()</code> function in the previous tutorial. Sometimes, you may want greater control over what happens when a user touches a zone. The <code>touchUp()</code>, <code>touchDown()</code>, and <code>press()</code> functions allow you to do just that.
 		</p>
 
 		<h4>Setup</h4>
