@@ -36,7 +36,7 @@ update: build $(export_directory) \
 		update-reference \
 		update-others
 
-push: push-localhost
+deploy: deploy-local
 
 #extra commands
 clean-specials:
@@ -61,7 +61,15 @@ update-others:
 	cp smt-repo/SMT.zip $(export_directory)/dl/
 
 #push macros
-push-localhost:
+deploy-local: update
 	sudo mkdir -p /var/www/html/smt/
 	sudo rm -rf /var/www/html/smt/*
 	sudo cp -r website/* /var/www/html/smt/
+deploy-home:
+	ssh root@home "rm -rf /var/www/html/smt/"
+	scp -r website root@kalev.io:/var/www/html/smt
+deploy-vialab: update
+	lftp \
+		-u vialab,$$(cat data/ftp_password.txt) \
+		sftp://vialab.science.uoit.ca:22 \
+		-e "mirror -R website /vialab/smt -P 30; exit"
