@@ -70,6 +70,6 @@ deploy-home:
 	scp -r website root@kalev.io:/var/www/html/smt
 deploy-vialab: update
 	lftp \
-		-u vialab,$$(cat data/ftp_password.txt) \
+		-u $$(cat data/ftp_credentials.txt) \
 		sftp://vialab.science.uoit.ca:22 \
 		-e "mirror -R website /vialab/smt -P 30; exit"
