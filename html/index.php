@@ -11,6 +11,10 @@
 		.titleSmall { font-size: 0.5em;}
 		#lastUpdate { font-size: 0.8em;}
 	</style>
+	<?php 
+		include_once(
+			$_SERVER['DOCUMENT_ROOT'].'/smt/include/tracking.php')
+	?>
 	<!--End of this page's head-->
 </head>
 <body onload="updateDate();">

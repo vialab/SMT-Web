@@ -6,6 +6,10 @@
 		$containsCode = true;
 		include $_SERVER['DOCUMENT_ROOT'].'/smt/include/head.php';
 	?>
+	<?php 
+		include_once(
+			$_SERVER['DOCUMENT_ROOT'].'/smt/include/tracking.php')
+	?>
 </head>
 <body>
 	<?php
@@ -66,7 +70,7 @@
 			</h3>
 			<h3>
 				<a href="tutorial/java.php">
-					Working with SMT in Java
+					Working with SMT in Java ( Object-Oriented SMT )
 				</a>
 			</h3>
 			<h3>

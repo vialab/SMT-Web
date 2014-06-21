@@ -6,6 +6,10 @@
 		$containsCode = true;
 		include 'include/head.php';
 	?>
+	<?php 
+		include_once(
+			$_SERVER['DOCUMENT_ROOT'].'/smt/include/tracking.php')
+	?>
 </head>
 <body>
 	<?php

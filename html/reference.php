@@ -9,6 +9,10 @@
 	<style>
 		:first-child{margin-left:0}
 	</style>
+	<?php 
+		include_once(
+			$_SERVER['DOCUMENT_ROOT'].'/smt/include/tracking.php')
+	?>
 </head>
 <body>
 	<?php

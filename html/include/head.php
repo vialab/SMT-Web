@@ -5,6 +5,7 @@
 <link href="/smt/css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
 <link href="/smt/css/mainCSS.css" rel="stylesheet" media="screen">
 <?php
+	$tracking_enabled = true;
 	if( ! isset( $containsCode))
 		$containsCode = false;
 	if( $containsCode){?>
