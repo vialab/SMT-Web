@@ -73,6 +73,9 @@
 		</p>
 
 		<h4>Explanation of Tutorial Code</h4>
+		<p>
+			Here we just set some of the options as an example. All touches' radius is decreased to 10, their colour and their trail colour is set to a light green, and their fade duration is doubled.
+		</p>
 <pre><code class="java">	//customize some of touch drawing options
 	// make the touch a bit smaller (default: 15)
 	SMT.setTouchRadius( 10);
@@ -81,10 +84,10 @@
 	SMT.setTrailColour( 140, 180, 140, 220);
 	// make touches fade away for twice as long (default: 250 ms)
 	SMT.setTouchFadeDuration( 500);</code></pre>
-		<p>
-			Here we just set some of the options as an example.
-		</p>
 
+		<p>
+			Here we create a number of custom zones in a number of colours, for a number of purposes. The first row sets the colour of only the touches that touch it. The second row sets the global colour of touches. The third row sets the colour of the trail of the touches that touch it. The fourth row sets the global colour of all touch trails.
+		</p>
 <pre><code class="java">	//create zones
 	//touch colour setters
 	ColourSetter touch_blue = new TouchColourSetter( 50, 40, 80, 80,
@@ -103,11 +106,12 @@
 		100, 100, 150, 200);
 	...</code></pre>
 		<p>
-			Here we create a number of custom zones in a number of colours, for a number of purposes. The first row sets the colour of only the touches that touch it. The second row sets the global colour of touches. The third row sets the colour of the trail of the touches that touch it. The fourth row sets the global colour of all touch trails.
-		</p>
-		<p>
 			The rest of the tutorial code is not particularly relevant to the main purpose, and thust will not be explained. A large portion of the code uses classes and object oriented programming. To learn how to use SMT effectively with object oriented programming, have a look at the <a href="/smt/tutorial/java.php">Working with SMT in Java</a> tutorial.
 		</p>
+
+		<h4>Screenshot</h4>
+		<img class="img-thumbnail" style="margin: 0 auto; display:block"
+			src="/smt/img/tutorial/touchcolours.png" alt="Touch Drawing Options Tutorial Screenshot">
 
 		<h4>Entire Source Code for Tutorial: 
 			<a href="/smt/dl.php?file=/smt/examples/Demos/TouchColours/TouchColours.pde">

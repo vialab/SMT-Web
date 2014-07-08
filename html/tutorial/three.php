@@ -55,7 +55,7 @@ grandchild.translate( 50, 50);</code></pre>
 			"MyZone" is drawn blue, "ChildZone" is drawn green, and "GrandChildZone" is drawn purple.
 		</p>
 		<img class="img-thumbnail" style="margin: 0 auto; display:block"
-			src="/smt/img/tutorial3.png" alt="Tutorial 3 Screenshot">
+			src="/smt/img/tutorial/three.png" alt="Tutorial 3 Screenshot">
 
 		<h4>Next Tutorial</h4>
 		<p>

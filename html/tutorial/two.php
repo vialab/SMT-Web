@@ -77,17 +77,17 @@ void pressMyOtherZone( Zone zone){
 		<p>
 			<h4>When MyZone is dragged, it becomes red.</h4>
 			<img class="img-thumbnail" style="margin: 0 auto; display:block"
-				src="/smt/img/tutorial2_dragging.png" alt="Tutorial 2 Screenshot">
+				src="/smt/img/tutorial/two_dragging.png" alt="Tutorial 2 Screenshot">
 		</p>
 		<p>
 			<h4>When MyZone is released, it becomes blue.</h4>
 			<img class="img-thumbnail" style="margin: 0 auto; display:block"
-				src="/smt/img/tutorial2_released.png" alt="Tutorial 2 Screenshot">
+				src="/smt/img/tutorial/two_released.png" alt="Tutorial 2 Screenshot">
 		</p>
 		<p>
 			<h4>When MyOtherZone is pressed, MyZone becomes green.</h4>
 			<img class="img-thumbnail" style="margin: 0 auto; display:block"
-				src="/smt/img/tutorial2_other.png" alt="Tutorial 2 Screenshot">
+				src="/smt/img/tutorial/two_other.png" alt="Tutorial 2 Screenshot">
 		</p>
 
 		<h4>Next Tutorial</h4>

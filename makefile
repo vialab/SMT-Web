@@ -61,14 +61,14 @@ update-others:
 	cp smt-repo/SMT.zip $(export_directory)/dl/
 
 #push macros
-deploy-local: update
+deploy-local:
 	sudo mkdir -p /var/www/html/smt/
 	sudo rm -rf /var/www/html/smt/*
 	sudo cp -r website/* /var/www/html/smt/
 deploy-home:
 	ssh root@home "rm -rf /var/www/html/smt/"
 	scp -r website root@kalev.io:/var/www/html/smt
-deploy-vialab: update
+deploy-vialab:
 	lftp \
 		-u $$(cat data/ftp_credentials.txt) \
 		sftp://vialab.science.uoit.ca:22 \

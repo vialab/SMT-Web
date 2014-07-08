@@ -84,7 +84,7 @@ void touchMyZone(Zone zone){
 			The screenshot depicts the user dragging the zone ( the green rectangle ).
 		</p>
 		<img class="img-thumbnail" style="margin: 0 auto; display:block"
-			src="/smt/img/tutorial1.png" alt="Tutorial 1 Screenshot">
+			src="/smt/img/tutorial/one.png" alt="Tutorial 1 Screenshot">
 
 		<h4>Next Tutorial</h4>
 		<p>

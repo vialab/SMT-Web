@@ -35,17 +35,17 @@
 	</div>
 	<div class="container-fluid">
 		<div class="row-fluid">
-	<?php
-		if( ! isset( $disableSideBar))
-			$disableSideBar = false;
-		if( ! $disableSideBar){?>
 			<div class="span3">
+			<?php
+				if( ! isset( $disableSideBar))
+					$disableSideBar = false;
+				if( ! $disableSideBar){?>
 				<div class="well sidebar-nav">
 					<ul class="nav nav-list">
 						<li class="nav-header">Pages</li>
 						<?php navlist()?>
 					</ul>
 				</div>
+			<?php } ?>
 			</div>
-	<?php } ?>
 			<div class="span7">
