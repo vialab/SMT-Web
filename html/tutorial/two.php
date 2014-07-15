@@ -90,7 +90,7 @@ void pressMyOtherZone( Zone zone){
 				src="/smt/img/tutorial/two_other.png" alt="Tutorial 2 Screenshot">
 		</p>
 
-		<h4>Next Tutorial</h4>
+		<h3>Next Tutorial</h3>
 		<p>
 			<a href="/smt/tutorial/three.php">Tutorial 3 - Parent and Child Zones</a>
 		</p>

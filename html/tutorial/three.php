@@ -57,7 +57,7 @@ grandchild.translate( 50, 50);</code></pre>
 		<img class="img-thumbnail" style="margin: 0 auto; display:block"
 			src="/smt/img/tutorial/three.png" alt="Tutorial 3 Screenshot">
 
-		<h4>Next Tutorial</h4>
+		<h3>Next Tutorial</h3>
 		<p>
 			<a href="/smt/tutorial/four.php">Tutorial 4 - Touch Functions</a>
 		</p>

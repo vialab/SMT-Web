@@ -86,7 +86,7 @@ void touchMyZone(Zone zone){
 		<img class="img-thumbnail" style="margin: 0 auto; display:block"
 			src="/smt/img/tutorial/one.png" alt="Tutorial 1 Screenshot">
 
-		<h4>Next Tutorial</h4>
+		<h3>Next Tutorial</h3>
 		<p>
 			<a href="/smt/tutorial/two.php">Tutorial 2 - TouchDown, TouchUp and Press</a>
 		</p>

@@ -54,7 +54,7 @@
 			</h3>
 			<h3>
 				<a href="tutorial/swipekeyboard.php">
-					Introducing the Swipe Keyboard Zone (In Progress)
+					Introducing the Swipe Keyboard Zone [ In Progress ]
 				</a>
 			</h3>
 		</div>
@@ -65,17 +65,17 @@
 		<div>
 			<h3>
 				<a href="tutorial/touchsourcebounds.php">
-					Customizing Touch Source Bounds
+					Customizing Touch Source Bounds [ In Progress ]
 				</a>
 			</h3>
 			<h3>
 				<a href="tutorial/java.php">
-					Working with SMT in Java ( Object-Oriented SMT )
+					Object-Oriented SMT ( Working with SMT in Java ) [ In Progress ]
 				</a>
 			</h3>
 			<h3>
 				<a href="tutorial/viewports.php">
-					Working with Viewports
+					Introducing Viewports [ In Progress ]
 				</a>
 			</h3>
 		</div>
