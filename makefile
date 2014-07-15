@@ -24,10 +24,6 @@ $(class_files): bin/%.class : src/%.java
 $(export_directory):
 	mkdir -p $@
 
-smt-repo:
-	git clone git@github.com:vialab/SMT.git \
-		-b master smt-repo
-
 #basic commands
 build: $(class_files)
 
@@ -35,8 +31,15 @@ update: build $(export_directory) \
 		update-examples \
 		update-reference \
 		update-others
+	cp -a html/* $(export_directory)
+	cp -r smt-repo/javadoc $(export_directory)
+	cp smt-repo/library.properties $(export_directory)/dl/SMT.txt
+	#cp smt-repo/SMT*.zip $(export_directory)/dl/
 
-deploy: deploy-local
+test:
+	rm -rf ~/www/smt/*
+	mkdir -p ~/www/smt/
+	cp -r website/* ~/www/smt/
 
 #extra commands
 clean-specials:
@@ -54,11 +57,6 @@ update-reference: $(export_directory) build
 	rm -rf $(export_directory)/reference
 	javadoc -doclet vialab.SMT.website.SMTDoclet -docletpath bin -public \
 		$(docscp) $$(find smt-repo/src -name *.java)
-update-others:
-	cp -a html/* $(export_directory)
-	cp -r smt-repo/javadoc $(export_directory)
-	cp smt-repo/library.properties $(export_directory)/dl/SMT.txt
-	cp smt-repo/SMT.zip $(export_directory)/dl/
 
 #push macros
 deploy-local:
