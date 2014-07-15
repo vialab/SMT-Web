@@ -8,7 +8,9 @@ fi
 template=$(cat template/example.php)
 
 #copy source smt-repo
-cp -r smt-repo/examples $export_directory
+rm -rf $export_directory/examples/*
+mkdir -p $export_directory/examples
+cp -r smt-repo/examples/* $export_directory/examples
 
 #generate php files for every example file
 for category in $export_directory/examples/*; do
