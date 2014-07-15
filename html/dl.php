@@ -1,16 +1,16 @@
 <?php
 	//get filename
 	$filename = $_GET['file'];
+	$dl_root = realpath( $_SERVER['DOCUMENT_ROOT']."/smt/");
+	$filepath = realpath( $dl_root.'/'.$filename);
 
-	die( basename( $filename));
-
-	$fullpath = $_SERVER['DOCUMENT_ROOT'].$filename;
-
-	//double check that file exists
+	//check that file isn't too high
+	if( strncmp( $dl_root, $filepath, strlen( $dl_root)) != 0)
+		die( "Permission denied :(");
+	//check that file exists
 	if( ! file_exists( $filename))
 		die( "File doesn't exist :(");
 
-	/*
 	//set headers
 	header( 'Pragma: public');
 	header( 'Cache-Control: no-cache, must-revalidate');
@@ -24,7 +24,7 @@
 
 	//send file
 	readfile( $filename);
-	*/
+
 	//done
 	exit;
 ?>
