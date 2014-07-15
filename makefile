@@ -29,12 +29,11 @@ build: $(class_files)
 
 update: build $(export_directory) \
 		update-examples \
-		update-reference \
-		update-others
+		update-reference
 	cp -a html/* $(export_directory)
 	cp -r smt-repo/javadoc $(export_directory)
 	cp smt-repo/library.properties $(export_directory)/dl/SMT.txt
-	#cp smt-repo/SMT*.zip $(export_directory)/dl/
+#	cp smt-repo/SMT*.zip $(export_directory)/dl/
 
 test:
 	rm -rf ~/www/smt/*

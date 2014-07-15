@@ -17,20 +17,30 @@
 		include 'include/header.php';
 	?>
 	<!--Start of this page's content-->
-		<h2>Download</h2>
+		<h2>Downloads</h2>
+		<h3>Stable Releases</h3>
 		<p>
-			To download the Simple Multi-Touch toolkit, open the Library Manager in Processing. Change the Category to I/O and look for <strong>Simple Multi-Touch (SMT)</strong>.  Once found, click the install button.
+			To install from a zip, simply extract the SMT folder from the zip into your processing libraries folder. If you don't know how to do that, we recommend downloading SMT with Processing's IDE instead ( see below ).
 		</p>
+		<h4>SMT 4.0 [ <a href="https://github.com/vialab/SMT/releases/download/v4.0/SMT.zip">download</a> ] [ <a href="https://github.com/vialab/SMT/releases/tag/v4.0">release notes</a> ] ( Processing v2.1.1+ )</h4>
+		<h4 id="SMTv3.8">SMT 3.8 [ <a href="https://github.com/vialab/SMT/releases/download/v3.8/SMT.zip">download</a> ] [ <a href="https://github.com/vialab/SMT/releases/tag/v3.8">release notes</a> ] ( Processing v2.1 )</h4>
 		<p>
-			Alternatively, <a href="dl/SMT.zip">you can download a zip here.</a>
+			Older releases and pre-releases are archived here: <a href="https://github.com/vialab/SMT/releases">SMT Releases</a>
+		</p>
+		<h3>Recent Pre-Releases</h3>
+		<h4>
+			Beta: <a href="https://github.com/vialab/SMT/releases/tag/v4.1b2">v4.1b2</a>
+			Alpha: <a href="https://github.com/vialab/SMT/releases/tag/v4.1a4">v4.1a4</a>
+			Auto-Build: <a href="https://drone.io/github.com/vialab/SMT/latest">
+				<img src="https://drone.io/github.com/vialab/SMT/status.png" alt="Auto-Build Status"/>
+			</a>
+		</h4>
+		<h3>Downloading SMT with the Processing IDE</h3>
+		<p>
+			The recommended way of using SMT with Processing is to use the IDE to install and update it. To do so, open the Library Manager in Processing. Change the Category to I/O and look for <strong>Simple Multi-Touch (SMT)</strong>.  Once you find it, click the install button.
 		</p>
 		<p>
 			Warning: SMT currently only works with Processing 2.1.1+. For older versions of processing, download <a href="https://github.com/vialab/SMT/releases/tag/v3.8">SMT 3.8.</a>
-		</p>
-			We are actively developing the toolkit, therefore to get the latest version, you can update using the Processing IDE, download the newest version from GitHub, or download the .zip file above.
-		</p>
-		<p>
-			For the source code, you can visit our <a href="https://github.com/vialab/SMT" target="_blank">GitHub page</a>.
 		</p>
 		<br>
 		<div class="row-fluid">
