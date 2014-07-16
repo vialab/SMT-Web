@@ -18,7 +18,7 @@
 	?>
 	<!--Start of this page's content-->
 		<h2>
-			Tutorial [ 1 | <a href="/smt/tutorial/two.php">2</a> | <a href="/smt/tutorial/three.php">3</a> | <a href="/smt/tutorial/four.php">4</a> ]
+			Basics [ 1 | <a href="/smt/tutorial/two.php">2</a> | <a href="/smt/tutorial/three.php">3</a> | <a href="/smt/tutorial/four.php">4</a> ]
 		</h2>
 		<h4>Introduction</h4>
 		<p>
@@ -88,7 +88,7 @@ void touchMyZone(Zone zone){
 
 		<h3>Next Tutorial</h3>
 		<p>
-			<a href="/smt/tutorial/two.php">Tutorial 2 - TouchDown, TouchUp and Press</a>
+			<a href="/smt/tutorial/two.php">Basics 2 - TouchDown, TouchUp and Press</a>
 		</p>
 
 		<h4>Entire Source Code for Tutorial: 

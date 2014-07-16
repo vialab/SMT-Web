@@ -18,7 +18,7 @@
 	?>
 	<!--Start of this page's content-->
 		<h2>
-			Tutorial [ <a href="/smt/tutorial/one.php">1</a> | <a href="/smt/tutorial/two.php">2</a> | <a href="/smt/tutorial/three.php">3</a> | 4 ]
+			Basics [ <a href="/smt/tutorial/one.php">1</a> | <a href="/smt/tutorial/two.php">2</a> | <a href="/smt/tutorial/three.php">3</a> | 4 ]
 		</h2>
 		<h4>Introduction</h4>
 		<p>

@@ -106,7 +106,7 @@
 		100, 100, 150, 200);
 	...</code></pre>
 		<p>
-			The rest of the tutorial code is not particularly relevant to the main purpose, and thust will not be explained. A large portion of the code uses classes and object oriented programming. To learn how to use SMT effectively with object oriented programming, have a look at the <a href="/smt/tutorial/java.php">Working with SMT in Java</a> tutorial.
+			The rest of the tutorial code is not particularly relevant to the main purpose, and thus will not be explained. A large portion of the code uses classes and object oriented programming. To learn how to use SMT effectively with object oriented programming, have a look at the <a href="/smt/tutorial/java.php">Working with SMT in Java</a> tutorial.
 		</p>
 
 		<h4>Screenshot</h4>

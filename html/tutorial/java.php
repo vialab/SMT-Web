@@ -28,7 +28,7 @@
 			Some people, especially those used to Java and object-oriented programming, can find SMT's reflection-invoked methods confusing or counter-intuitive. Fortunately, SMT fully supports object-oriented programming. When using the processing library in java, we highly recommend extending the <code>Zone</code> class over the reflection-based approach. Doing so is better for both performance and development.
 		</p>
 		<p>
-			This tutorial show you the basics of extending the <code>Zone</code> class. It will cover best practices, possible mistakes and their solutions or preventative measures, as well a few tips and tricks. Please note that this tutorial is for SMT 4.1. If you need to write a sketch that works on older versions of SMT, look at <a href="#legacy">the section of this tutorial on legacy methods</a>.
+			This tutorial show you the basics of extending the <code>Zone</code> class. It will cover implementing core zone functionality, best practices, as well a few tips and tricks. Please note that this tutorial is for SMT 4.1. If you need to write a sketch that works with older versions of SMT, look at <a href="#legacy">the section of this tutorial on legacy methods</a>.
 		</p>
 
 		<h4>Constructors</h4>
@@ -41,7 +41,7 @@
 		happy = true;
 	}</code></pre>
 		<p>
-			There is but one requirement of the constructor of a <code>Zone</code> subclass: the first line must call one of the available super-constructors. In this case, we've called <code>Zone( int x, int y, int width, int height)</code>. The simplest available super-constructor is <code>Zone()</code>, which can be invoked with <code>super();</code>. Feel free to do whatever else in the rest of the constructor, but that super-constructor call must be made for the class to work with SMT.
+			There is but one requirement of the constructor of a <code>Zone</code> subclass: the first line must call one of the available super-constructors. In this case, we've called <code>Zone( int x, int y, int width, int height)</code>. The simplest available super-constructor is <code>Zone()</code>, which can be invoked with <code>super();</code>. You can find a list of the rest on <a href="http://localhost/smt/javadoc/vialab/SMT/Zone.html">Zone's javadoc page</a>. Feel free to do whatever else in the rest of the constructor, but a super-constructor call must be made for the class to work with SMT.
 		</p>
 
 		<h4>The Draw Method</h4>
@@ -65,7 +65,7 @@
 			Overriding <code>Zone.draw()</code> defines the draw method for that class. In this method, you have direct access to all methods of the underlying renderer of the sketch. Be aware that there are few protections on what you can do with those methods.
 		</p>
 		<p>
-			<strong>Note:</strong> A few functions change during the draw ( and pick draw ) method. All matrix transformation functions, which would normally be directed to the zone's matrix, will be directed to the renderer instead. To make transformations to the zone's matrix during a draw function, make the transformation calls on <code>this.matrix</code> instead ( eg: <code>this.matrix.rotate( 0.1);</code> ). The only other function that changes during drawing is the <code>background()</code> function. Instead of drawing a background covering the entire screen, it draws a rectangle of the given colour, and of the width and height of the zone.
+			<strong>Note:</strong> A few functions change during the draw ( and pick draw ) method. All matrix transformation functions, which would normally be directed to the zone's stored transformation matrix, will be directed to the renderer instead. To make transformations to the zone's matrix during the draw method, make the transformation calls on <code>this.matrix</code> instead ( eg: <code>this.matrix.rotate( 0.1);</code> ). The only other function that changes during drawing is the <code>background()</code> function. Instead of drawing a background covering the entire screen, it draws a rectangle of the given colour and of the width and height of the zone.
 		</p>
 
 		<h4>The Other Methods</h4>
@@ -73,7 +73,7 @@
 			Here are the rest of the basic methods that make up the core zone functionality. Note the <code>@Override</code> directive being used to guarantee that the super method exists and can be overriden. The <code>@Override</code> directive is not mandatory, but is considered good practice.
 		</p>
 		<p>
-			Here's how to implement the pick draw method. In this example, we simply draw an ellipse the size of the zone. This overrides the default pick draw method, which simply draws a rectangle the size of the zone.
+			Here's how to define the pick draw method. In this example, we simply draw a circle the size of the zone. This overrides the default pick draw method, which simply draws a rectangle the size of the zone.
 		</p>
 		<p>
 			<strong>Note:</strong> The following functions are blocked while the pickDraw method is called. These functions include: <code>background()</code>, <code>fill()</code>, <code>stroke()</code>, and <code>tint()</code>.
@@ -84,7 +84,7 @@
 		ellipse( 100, 100, 200, 200);
 	}</code></pre>
 		<p>
-			Here's how to implement the touch method.
+			Here's how to define the touch method.
 		</p>
 <pre><code class="java">	//touch method
 	@Override
@@ -92,7 +92,7 @@
 		rst();
 	}</code></pre>
 		<p>
-			Here's how to implement the touch down method.
+			Here's how to define the touch down method.
 		</p>
 <pre><code class="java">	//touch down method
 	@Override
@@ -100,7 +100,7 @@
 		happy = false;
 	}</code></pre>
 		<p>
-			Here's how to implement the touch up method.
+			Here's how to define the touch up method.
 		</p>
 <pre><code class="java">	//touch up method
 	@Override
@@ -109,7 +109,7 @@
 			happy = true;
 	}</code></pre>
 		<p>
-			Here's how to implement the touch moved method.
+			Here's how to define the touch moved method.
 		</p>
 <pre><code class="java">	//touch moved method
 	@Override
@@ -161,7 +161,7 @@
 		return super.add( zone);
 	}</code></pre>
 		<p>
-			Overriding the <code>add( Zone)</code> method allows you to make any desired changes to the given zone before actually adding it. Alternatively, you could make changes to the the zone doing the adding. Imagine, for example, a "Container" zone that automatically resized to encapsulate any zones added to it.
+			Overriding the <code>add( Zone)</code> method allows you to make any desired changes to the given zone before actually adding it. Alternatively, you could make changes to the the zone doing the adding. Imagine, for example, a "Wrapper" zone that automatically resized to encapsulate any zones added to it.
 		</p>
 <pre><code class="java">	@Override
 	public boolean remove( Zone zone){
@@ -189,7 +189,7 @@
 		}
 	};</code></pre>
 		<p>
-			Anonymous classes are a relatively popular feature of Java. They are often used for UI development. SMT supports anonymous zone classes as of v3.8. However, these objects cause problems with static references and the like. Here we create a new anonymous zone object just to demonstrate the possibility. Note that the anonymous zone is given the name of "AnonyZone".
+			Anonymous classes are a relatively popular feature of Java. They are often used for UI development. SMT supports anonymous zone objects as of v3.8. Here we create a new anonymous zone object just to demonstrate the possibility. Note that the anonymous zone is given the name of "AnonyZone".
 		</p>
 
 		<h4>Applet Methods</h4>
@@ -202,13 +202,13 @@ void touchAnonyZone( Zone zone){
 	zone.pinch();
 }</code></pre>
 		<p>
-			SMT will actually call this function instead of the touch method defined in the (anonymous) class for <code>anonyzone</code>. When running this example, notice that the zone on the left will not rotate, only scale and translate. This is because the <code>pinch()</code> method is being called instead of the <code>rst()</code> method.
+			SMT will actually automatically detect and call this function instead of the touch method defined in the (anonymous) class for <code>anonyzone</code>. When running this example, notice that the zone on the left will not rotate, only scale and translate. This is because the <code>pinch()</code> method is being called instead of the <code>rst()</code> method. If you commented out, renamed, or simply deleted this method, the touch method defined in the anonymous class for <code>anonyzone</code> would be called.
 		</p>
 		<p>
-			It's important to keep this functionality in mind when writing zones for other people, so that they can use the zones you've written with normal processing sketches in the manner that their used to using SMT's zones.
+			It's important to keep this functionality in mind when writing zones for other people. Users should ideally be able to use the zones you've written with normal processing sketches in the manner that they use SMT's zones.
 		</p>
 		<p>
-			As a final note, it's possible to disable this functionality by overriding certain methods. Don't try this if you don't know what you're doing, however. There are a number of functions in the <code>Zone</code> class called <code>public void invokeSomethingMethod()</code>, for example, <code>invokeDrawMethod</code> or <code>invokeTouchMethod</code>. Overriding these functions to just call your custom <code>something()</code> function ( <code>draw()</code>, for example ) will bypass the corresponding PApplet method. If you're going to attempt this, you might want to look at the source code for the methods you're overriding, just as a reference.
+			As a final note, it's possible to disable this functionality by overriding certain methods. Don't try this if you don't know what you're doing, however. There are a number of functions in the <code>Zone</code> class called <code>public void invokeSomethingMethod()</code>, <code>invokeDrawMethod</code> or <code>invokeTouchMethod</code> for example. Overriding these functions to just call the corresponding function ( <code>draw()</code>, for example ) will bypass the PApplet method. If you're going to attempt this, you might want to look at the source code for the methods you're overriding, just as a reference.
 		</p>
 
 		<h4>Screenshot</h4>

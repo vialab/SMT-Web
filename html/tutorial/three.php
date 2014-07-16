@@ -18,7 +18,7 @@
 	?>
 	<!--Start of this page's content-->
 		<h2>
-			Tutorial [ <a href="/smt/tutorial/one.php">1</a> | <a href="/smt/tutorial/two.php">2</a> | 3 | <a href="/smt/tutorial/four.php">4</a> ]
+			Basics [ <a href="/smt/tutorial/one.php">1</a> | <a href="/smt/tutorial/two.php">2</a> | 3 | <a href="/smt/tutorial/four.php">4</a> ]
 		</h2>
 		<h4>Introduction</h4>
 		<p>
@@ -59,7 +59,7 @@ grandchild.translate( 50, 50);</code></pre>
 
 		<h3>Next Tutorial</h3>
 		<p>
-			<a href="/smt/tutorial/four.php">Tutorial 4 - Touch Functions</a>
+			<a href="/smt/tutorial/four.php">Basics 4 - Touch Functions</a>
 		</p>
 
 		<h4>Entire Source Code for Tutorial: 

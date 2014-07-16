@@ -18,7 +18,7 @@
 	?>
 	<!--Start of this page's content-->
 		<h2>
-			Tutorial [ <a href="/smt/tutorial/one.php">1</a> | 2 | <a href="/smt/tutorial/three.php">3</a> | <a href="/smt/tutorial/four.php">4</a> ]
+			Basics [ <a href="/smt/tutorial/one.php">1</a> | 2 | <a href="/smt/tutorial/three.php">3</a> | <a href="/smt/tutorial/four.php">4</a> ]
 		</h2>
 		<h4>Introduction</h4>
 		<p>
@@ -92,7 +92,7 @@ void pressMyOtherZone( Zone zone){
 
 		<h3>Next Tutorial</h3>
 		<p>
-			<a href="/smt/tutorial/three.php">Tutorial 3 - Parent and Child Zones</a>
+			<a href="/smt/tutorial/three.php">Basics 3 - Parent and Child Zones</a>
 		</p>
 
 		<h4>Entire Source Code for Tutorial: 

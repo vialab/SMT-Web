@@ -18,38 +18,43 @@
 	?>
 	<!--Start of this page's content-->
 		<h2>
-			Introductory Tutorials
+			Basics
 		</h2>
 		<div>
 			<h3>
 				<a href="tutorial/one.php">
-					Tutorial 1 - Getting Started
+					Basics 1 - Getting Started
 				</a>
 			</h3>
 			<h3>
 				<a href="tutorial/two.php">
-					Tutorial 2 - TouchDown, TouchUp and Press
+					Basics 2 - TouchDown, TouchUp and Press
 				</a>
 			</h3>
 			<h3>
 				<a href="tutorial/three.php">
-					Tutorial 3 - Parent and Child Zones
+					Basics 3 - Parent and Child Zones
 				</a>
 			</h3>
 			<h3>
 				<a href="tutorial/four.php">
-					Tutorial 4 - Touch Functions
+					Basics 4 - Touch Functions
 				</a>
 			</h3>
 		</div>
 		<br/>
 		<h2>
-			Other Tutorials
+			Additional Topics
 		</h2>
 		<div>
 			<h3>
 				<a href="tutorial/touchdraw.php">
-					Customizing Touch Drawing Options
+					Customizing SMT's Touch Visualizations
+				</a>
+			</h3>
+			<h3>
+				<a href="tutorial/touchsourcebounds.php">
+					Defining Touch Source Bounds [ In Progress ]
 				</a>
 			</h3>
 			<h3>
@@ -64,13 +69,8 @@
 		</h2>
 		<div>
 			<h3>
-				<a href="tutorial/touchsourcebounds.php">
-					Customizing Touch Source Bounds [ In Progress ]
-				</a>
-			</h3>
-			<h3>
 				<a href="tutorial/java.php">
-					Object-Oriented SMT ( Working with SMT in Java ) [ In Progress ]
+					Object-Oriented SMT ( Working with SMT in Java )
 				</a>
 			</h3>
 			<h3>
