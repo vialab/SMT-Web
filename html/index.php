@@ -49,6 +49,7 @@
 						<img src="https://drone.io/github.com/vialab/SMT/status.png" alt="Auto-Build Status"/>
 					</a>
 				</h4>
+				<br>
 				<h2>Contributions Welcome!</h2>
 				<p>
 					Simple Multi-Touch is open source and open to new contributions. If you want to help us out, check out our <a href="https://github.com/vialab/SMT">Github page</a> and contact us by email!

@@ -1,4 +1,3 @@
-			</div>
 		</div>
 		<hr>
 		<footer>
@@ -11,8 +10,6 @@
 			</p>
 		</footer>
 	</div>
-	<?php if( ! $disableSideBar){?>
-	<?php } ?>
 
 	<script src="http://code.jquery.com/jquery.js"></script>
 	<script src="/smt/js/bootstrap.min.js"></script>
