@@ -32,7 +32,7 @@ update: build $(export_dir) \
 		$(export_dir)/javadoc
 	cp -a html/* $(export_dir)
 
-test:
+test: update
 	rm -rf ~/www/smt/*
 	mkdir -p ~/www/smt/
 	cp -r website/* ~/www/smt/

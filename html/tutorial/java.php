@@ -33,14 +33,15 @@
 
 		<h4>Constructors</h4>
 <pre><code class="java">class HappyFaceZone extends Zone {
-	boolean happy = true;
+	private boolean happy;
 
 	//constructor
 	public HappyFaceZone(){
 		super( 500, 10, 200, 200);
+		happy = true;
 	}</code></pre>
 		<p>
-			There is but one requirement of the constructor of a <code>Zone</code> subclass - You must call one of the available super-constructors. In this case, we've called <code>Zone( int x, int y, int width, int height)</code>
+			There is but one requirement of the constructor of a <code>Zone</code> subclass: the first line must call one of the available super-constructors. In this case, we've called <code>Zone( int x, int y, int width, int height)</code>. The simplest available super-constructor is <code>Zone()</code>, which can be invoked with <code>super();</code>. Feel free to do whatever else in the rest of the constructor, but that super-constructor call must be made for the class to work with SMT.
 		</p>
 
 		<h4>The Draw Method</h4>
@@ -61,12 +62,21 @@
 			100, 100 - 10);
 	}</code></pre>
 		<p>
-			Overriding <code>Zone.draw()</code> redefines the draw method for that zone.
+			Overriding <code>Zone.draw()</code> defines the draw method for that class. In this method, you have direct access to all methods of the underlying renderer of the sketch. Be aware that there are few protections on what you can do with those methods.
+		</p>
+		<p>
+			<strong>Note:</strong> A few functions change during the draw ( and pick draw ) method. All matrix transformation functions, which would normally be directed to the zone's matrix, will be directed to the renderer instead. To make transformations to the zone's matrix during a draw function, make the transformation calls on <code>this.matrix</code> instead ( eg: <code>this.matrix.rotate( 0.1);</code> ). The only other function that changes during drawing is the <code>background()</code> function. Instead of drawing a background covering the entire screen, it draws a rectangle of the given colour, and of the width and height of the zone.
 		</p>
 
 		<h4>The Other Methods</h4>
 		<p>
-			Here are the rest of the basic methods that make up the core zone functionality.
+			Here are the rest of the basic methods that make up the core zone functionality. Note the <code>@Override</code> directive being used to guarantee that the super method exists and can be overriden. The <code>@Override</code> directive is not mandatory, but is considered good practice.
+		</p>
+		<p>
+			Here's how to implement the pick draw method. In this example, we simply draw an ellipse the size of the zone. This overrides the default pick draw method, which simply draws a rectangle the size of the zone.
+		</p>
+		<p>
+			<strong>Note:</strong> The following functions are blocked while the pickDraw method is called. These functions include: <code>background()</code>, <code>fill()</code>, <code>stroke()</code>, and <code>tint()</code>.
 		</p>
 <pre><code class="java">	//pick draw method
 	@Override
@@ -74,7 +84,7 @@
 		ellipse( 100, 100, 200, 200);
 	}</code></pre>
 		<p>
-			Here's how to implement the pick draw method.
+			Here's how to implement the touch method.
 		</p>
 <pre><code class="java">	//touch method
 	@Override
@@ -82,7 +92,7 @@
 		rst();
 	}</code></pre>
 		<p>
-			Here's how to implement the pick draw method.
+			Here's how to implement the touch down method.
 		</p>
 <pre><code class="java">	//touch down method
 	@Override
@@ -90,7 +100,7 @@
 		happy = false;
 	}</code></pre>
 		<p>
-			Here's how to implement the pick draw method.
+			Here's how to implement the touch up method.
 		</p>
 <pre><code class="java">	//touch up method
 	@Override
@@ -99,19 +109,22 @@
 			happy = true;
 	}</code></pre>
 		<p>
-			Here's how to implement the pick draw method.
+			Here's how to implement the touch moved method.
 		</p>
 <pre><code class="java">	//touch moved method
 	@Override
 	public void touchMoved( Touch touch){}</code></pre>
-		<p>
-			Here's how to implement the pick draw method.
-		</p>
 
 		<a id="legacy"></a>
 		<h4>Legacy Methods</h4>
 		<p>
-			Before SMT 4.1, the above methods had different names. These old names are still supported, but are deprecated.
+			Ignore this section if you don't need to support sketches written for old versions of SMT ( SMT 4.0 and previous ).
+		</p>
+		<p>
+			Before SMT 4.1, the above methods had different names. These old names are still supported, but are deprecated. In order to provide backwards compatibility, SMT automatically detects when these "impl" methods are overriden, and calls them instead of their "non-impl" counterparts.
+		</p>
+		<p>
+			If you wanted to override the "impl" methods, this is how you would do it.
 		</p>
 <pre><code class="java">	//draw method
 	@Override
@@ -131,34 +144,31 @@
 	//touch moved method
 	@Override
 	public void touchMovedImpl( Touch touch){}</code></pre>
-		<p>
-			text
-		</p>
 
 		<h4>Advanced Methods</h4>
 		<p>
-			text
+			Here are a few extra methods that might be useful to override.
 		</p>
 <pre><code class="java">	@Override
 	public void assign( Touch... touches){
 		super.assign( touches);
 	}</code></pre>
 		<p>
-			text
+			Overriding the assign method can be useful for two specific things. For one, it is an easy way to prevent touches from being assigned to a zone, but still allow the zone to block touches from being assigned to other zones that are drawn beneath it. To achieve that, simply comment out the <code>super.assign(...</code> call. Another thing overriding assign can be used for is redirecting touches to another zone. To do so, replace the <code>super.assign(...</code> call with something to the effect of <code>other_zone.assign( touches);</code>.
 		</p>
 <pre><code class="java">	@Override
 	public boolean add( Zone zone){
 		return super.add( zone);
 	}</code></pre>
 		<p>
-			text
+			Overriding the <code>add( Zone)</code> method allows you to make any desired changes to the given zone before actually adding it. Alternatively, you could make changes to the the zone doing the adding. Imagine, for example, a "Container" zone that automatically resized to encapsulate any zones added to it.
 		</p>
 <pre><code class="java">	@Override
 	public boolean remove( Zone zone){
 		return super.remove( zone);
 	}</code></pre>
 		<p>
-			text
+			Similarly, overriding the remove method allows you to make changes to the remover or removee before the removal is finished.
 		</p>
 
 		<h4>Anonymous Classes</h4>
@@ -179,11 +189,37 @@
 		}
 	};</code></pre>
 		<p>
-			text
+			Anonymous classes are a relatively popular feature of Java. They are often used for UI development. SMT supports anonymous zone classes as of v3.8. However, these objects cause problems with static references and the like. Here we create a new anonymous zone object just to demonstrate the possibility. Note that the anonymous zone is given the name of "AnonyZone".
 		</p>
 
+		<h4>Applet Methods</h4>
+		<p>
+			There is one final feature to be aware of when extending the <code>Zone</code> class. Methods defined in the PApplet ( or sketch ) can override zone methods.
+			Here we demonstrate with the touch method for the previously covered anonymous zone.
+		</p>
+<pre><code class="java">//touch method for anonymous zone
+void touchAnonyZone( Zone zone){
+	zone.pinch();
+}</code></pre>
+		<p>
+			SMT will actually call this function instead of the touch method defined in the (anonymous) class for <code>anonyzone</code>. When running this example, notice that the zone on the left will not rotate, only scale and translate. This is because the <code>pinch()</code> method is being called instead of the <code>rst()</code> method.
+		</p>
+		<p>
+			It's important to keep this functionality in mind when writing zones for other people, so that they can use the zones you've written with normal processing sketches in the manner that their used to using SMT's zones.
+		</p>
+		<p>
+			As a final note, it's possible to disable this functionality by overriding certain methods. Don't try this if you don't know what you're doing, however. There are a number of functions in the <code>Zone</code> class called <code>public void invokeSomethingMethod()</code>, for example, <code>invokeDrawMethod</code> or <code>invokeTouchMethod</code>. Overriding these functions to just call your custom <code>something()</code> function ( <code>draw()</code>, for example ) will bypass the corresponding PApplet method. If you're going to attempt this, you might want to look at the source code for the methods you're overriding, just as a reference.
+		</p>
+
+		<h4>Screenshot</h4>
+		<p>
+			This is what you should see when running this tutorial's code in processing.
+		</p>
+		<img class="img-thumbnail" style="margin: 0 auto; display:block"
+			src="/smt/img/tutorial/java.png" alt="Java Tutorial Screenshot">
+
 		<h4>Entire Source Code for Tutorial: 
-			<a href="/smt/dl.php?file=/smt/examples/Advanced/Java/Java.pde">
+			<a href="/smt/dl.php?file=examples/Advanced/Java/Java.pde">
 				Download
 			</a>
 		</h4>
