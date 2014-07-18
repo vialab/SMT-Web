@@ -54,7 +54,7 @@
 			<li>Number of triangles used to draw touches - <code>SMT.setTouchSections( int sections)</code></li>
 		</ul>
 		<p>
-			Additionally, you can set individual touch's colours with <code>Touch.setTint(  float red, float green, float blue, float alpha)</code>, which will override the globally set colours.
+			Additionally, you can set individual touch colours with <code>Touch.setTint(  float red, float green, float blue, float alpha)</code>, which will override the globally set colours.
 		</p>
 
 		<h4>Trail Drawing Options</h4>
@@ -69,12 +69,12 @@
 			<li>Base number of interpolated points - <code>SMT.setTrailT_N( int t_n)</code></li>
 		</ul>
 		<p>
-			Additionally, you can set individual touch's colours with <code>Touch.setTrailTint(  float red, float green, float blue, float alpha)</code>, which will override the globally set trail colours. Finally, trails can be disabled with <code>SMT.setTrailEnabled( boolean enabled)</code>.
+			Additionally, you can set individual touch's trail colours with <code>Touch.setTrailTint(  float red, float green, float blue, float alpha)</code>, which will override the globally set trail colours. Finally, trails can be toggled with <code>SMT.setTrailEnabled( boolean enabled)</code>.
 		</p>
 
 		<h4>Explanation of Tutorial Code</h4>
 		<p>
-			Here we just set some of the options as an example. All touches' radius is decreased to 10, their colour and their trail colour is set to a light green, and their fade duration is doubled.
+			Here we just set some of the options as an example. The touch radius is decreased to 10, the global touch and trail colours are set to a light green, and the fade animation duration is doubled.
 		</p>
 <pre><code class="java">	//customize some of touch drawing options
 	// make the touch a bit smaller (default: 15)
