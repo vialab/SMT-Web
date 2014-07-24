@@ -66,8 +66,8 @@ deploy-local:
 	sudo rm -rf /var/www/html/smt/*
 	sudo cp -r website/* /var/www/html/smt/
 deploy-home:
-	ssh root@home "rm -rf /var/www/html/smt/"
-	scp -r website root@kalev.io:/var/www/html/smt
+	ssh home-root "rm -rf /var/www/html/smt/"
+	scp -r website home-root:/var/www/html/smt
 deploy-vialab:
 	lftp \
 		-u $$(cat data/ftp_credentials.txt) \
