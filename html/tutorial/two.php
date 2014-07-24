@@ -96,7 +96,7 @@ void pressMyOtherZone( Zone zone){
 		</p>
 
 		<h4>Entire Source Code for Tutorial: 
-			<a href="/smt/dl.php?file=/smt/examples/Tutorial/Two/Two.pde">Download</a>
+			<a href="/smt/dl.php?file=examples/Tutorial/Two/Two.pde">Download</a>
 		</h4>
 		<pre><code class="java"><?php
 			include $_SERVER['DOCUMENT_ROOT'].'/smt/examples/Tutorial/Two/Two.pde';

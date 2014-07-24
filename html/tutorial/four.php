@@ -138,7 +138,7 @@ void touchRstZoneF( Zone zone){
 		</p>
 
 		<h4>Entire Source Code for Tutorial: 
-			<a href="/smt/dl.php?file=/smt/examples/Tutorial/Four/Four.pde">Download</a>
+			<a href="/smt/dl.php?file=examples/Tutorial/Four/Four.pde">Download</a>
 		</h4>
 		<pre><code class="java"><?php
 			include $_SERVER['DOCUMENT_ROOT'].'/smt/examples/Tutorial/Four/Four.pde';

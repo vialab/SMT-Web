@@ -34,8 +34,15 @@
 			asdf
 		</p>
 
+		<h4>Setup</h4>
+		<h4>Setup</h4>
+		<h4>Setup</h4>
+		<h4>Setup</h4>
+		<h4>Setup</h4>
+		<h4>Setup</h4>
+
 		<h4>Entire Source Code for Tutorial: 
-			<a href="/smt/dl.php?file=/smt/examples/Advanced/TouchSourceBounds/TouchSourceBounds.pde">
+			<a href="/smt/dl.php?file=examples/Advanced/TouchSourceBounds/TouchSourceBounds.pde">
 				Download
 			</a>
 		</h4>

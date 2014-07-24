@@ -114,7 +114,7 @@
 			src="/smt/img/tutorial/touchcolours.png" alt="Touch Drawing Options Tutorial Screenshot">
 
 		<h4>Entire Source Code for Tutorial: 
-			<a href="/smt/dl.php?file=/smt/examples/Demos/TouchColours/TouchColours.pde">
+			<a href="/smt/dl.php?file=examples/Demos/TouchColours/TouchColours.pde">
 				Download
 			</a>
 		</h4>

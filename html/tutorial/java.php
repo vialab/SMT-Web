@@ -224,7 +224,7 @@ void touchAnonyZone( Zone zone){
 			</a>
 		</h4>
 		<pre><code class="java"><?php
-			include $_SERVER['DOCUMENT_ROOT'].'/smt/examples/Advanced/Java/Java.pde';
+			include $_SERVER['DOCUMENT_ROOT'].'examples/Advanced/Java/Java.pde';
 		?></code></pre>
 	<!--End of this page's content-->
 	<?php

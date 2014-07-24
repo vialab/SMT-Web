@@ -35,7 +35,7 @@
 		</p>
 
 		<h4>Entire Source Code for Tutorial: 
-			<a href="/smt/dl.php?file=/smt/examples/Demos/Template/Template.pde">
+			<a href="/smt/dl.php?file=examples/Demos/Template/Template.pde">
 				Download
 			</a>
 		</h4>
