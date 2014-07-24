@@ -16,11 +16,15 @@ cp -r smt-repo/examples/* $export_directory/examples
 for category in $export_directory/examples/*; do
 	for example in $category/*; do
 		name=${example##*/}
-		codefile=/smt/${example#*/}/$name.pde
+		rel_codefile=${example#*/}/$name.pde
+		codefile=/smt/$rel_codefile
+		#name
 		content=${template/\$Name/$name}
-		#once for dl link
+		#dl link
+		content=${content/\$Rel_codefile/$rel_codefile}
+		#direct dl link
 		content=${content/\$Codefile/$codefile}
-		#once for code tag
+		#code tag
 		content=${content/\$Codefile/$codefile}
 		echo -en "$content" >> $example.php
 	done
