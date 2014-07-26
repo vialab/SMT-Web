@@ -43,7 +43,7 @@
 				<h4>SMT 3.8 [ <a href="https://github.com/vialab/SMT/releases/download/v3.8/SMT.zip">download</a> ] [ <a href="https://github.com/vialab/SMT/releases/tag/v3.8">release notes</a> ] ( Processing v2.1 )</h4>
 				<h3>Recent Pre-Releases</h3>
 				<h4>
-					Beta: <a href="https://github.com/vialab/SMT/releases/tag/v4.1b2">v4.1b2</a>
+					Beta: <a href="https://github.com/vialab/SMT/releases/tag/v4.1b3">v4.1b3</a>
 					Alpha: <a href="https://github.com/vialab/SMT/releases/tag/v4.1a4">v4.1a4</a>
 					Auto-Build: <a href="https://drone.io/github.com/vialab/SMT/latest">
 						<img src="https://drone.io/github.com/vialab/SMT/status.png" alt="Auto-Build Status"/>
