@@ -54,7 +54,7 @@
 			</h3>
 			<h3>
 				<a href="tutorial/tsbounds.php">
-					Defining Touch Source Bounds [ In Progress ]
+					Defining Touch Source Bounds
 				</a>
 			</h3>
 			<h3>

@@ -31,7 +31,7 @@
 			Note: We generally recommend making setting up touch source bounds in the setup function, but after the <code>SMT.init()</code> call.
 		</p>
 		<p>
-			Developer's Note: We're sorry aboud the long function names. We couldn't come up with anything more concise, but just as descriptive. If you have a better suggestion for the function names, feel free to make a <a href="https://github.com/vialab/SMT/issues/new">new issue on our github page</a> about it, and we'll definitely consider it.
+			Developer's Note: We're sorry about the long function names. We couldn't come up with anything more concise, but just as descriptive. If you have a better suggestion for the function names, feel free to make a <a href="https://github.com/vialab/SMT/issues/new">new issue on our github page</a> about it, and we'll definitely consider it.
 		</p>
 
 		<h4>Active Display Mode</h4>
@@ -44,7 +44,7 @@
 <pre><code class="java">SMT.setTouchSourceBoundsDisplay( 0);
 SMT.setTouchSourceBoundsDisplay( ":0.1");</code></pre>
 		<p>
-			If you know the exact id or index of the display you want to bind touches onto, you can use these functions to select them. The format of the id string can depend on your OS, JVM, display server, and display card's pci slot. Basically, don't use the id string overload unless you really know what you're doing.
+			If you know the exact id or index of the display you want to bind touches onto, you can use these functions to select them. The format of the id string can depend on your OS, JVM, display server, and display card's PCI slot. Basically, don't use the id string overload unless you really know what you're doing.
 		</p>
 
 		<h4>Screen Mode</h4>
@@ -56,7 +56,7 @@ SMT.setTouchSourceBoundsDisplay( ":0.1");</code></pre>
 		<h4>Sketch Mode</h4>
 <pre><code class="java">SMT.setTouchSourceBoundsSketch();</code></pre>
 		<p>
-			This mode is the first that we've discussed that doesn't account for the window's location. Instead, it just directly binds the touches into the sketch's co-ordinates. For example, (0,0) would be bound to (0,0), and (1,1) would be bound to (sketchWidth,sketchHeight). It can be hard to understand the difference between this mode and the previous ones without actually trying it. If you've used SMT 4.0 or previous releases, this is how touches were bound then. This mode is generally recommended for full-screen sketches.
+			This mode is the first that we've discussed that doesn't account for the window's location. Instead, it just directly binds the touches into the sketch's co-ordinates. For example, (0,0) would be bound to (0,0), and (1,1) would be bound to (sketchWidth,sketchHeight). It can be hard to understand the difference between this mode and the previous ones without actually trying it. If you've used SMT 4.0 or previous releases, this is how touches were bound then. This mode is generally recommended for fullscreen sketches.
 		</p>
 
 		<h4>Rectangle Mode</h4>
