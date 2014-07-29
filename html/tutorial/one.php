@@ -91,8 +91,13 @@ void touchMyZone(Zone zone){
 			<a href="/smt/tutorial/two.php">Basics 2 - TouchDown, TouchUp and Press</a>
 		</p>
 
-		<h4>Entire Source Code for Tutorial: 
-			<a href="/smt/dl.php?file=examples/Tutorial/One/One.pde">Download</a>
+		<h4>Entire Source Code for Tutorial: [ 
+			<a href="/smt/dl.php?file=examples/Tutorial/One/One.pde">
+				Download
+			</a> | 
+			<a href="/smt/examples/Tutorial/One/One.pde">
+				Direct Link
+			</a> ]
 		</h4>
 		<pre><code class="java"><?php
 			include $_SERVER['DOCUMENT_ROOT'].'/smt/examples/Tutorial/One/One.pde';

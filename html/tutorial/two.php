@@ -95,8 +95,13 @@ void pressMyOtherZone( Zone zone){
 			<a href="/smt/tutorial/three.php">Basics 3 - Parent and Child Zones</a>
 		</p>
 
-		<h4>Entire Source Code for Tutorial: 
-			<a href="/smt/dl.php?file=examples/Tutorial/Two/Two.pde">Download</a>
+		<h4>Entire Source Code for Tutorial: [ 
+			<a href="/smt/dl.php?file=examples/Tutorial/Two/Two.pde">
+				Download
+			</a> | 
+			<a href="/smt/examples/Tutorial/Two/Two.pde">
+				Direct Link
+			</a> ]
 		</h4>
 		<pre><code class="java"><?php
 			include $_SERVER['DOCUMENT_ROOT'].'/smt/examples/Tutorial/Two/Two.pde';

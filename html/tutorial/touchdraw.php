@@ -113,10 +113,13 @@
 		<img class="img-thumbnail" style="margin: 0 auto; display:block"
 			src="/smt/img/tutorial/touchcolours.png" alt="Touch Drawing Options Tutorial Screenshot">
 
-		<h4>Entire Source Code for Tutorial: 
+		<h4>Entire Source Code for Tutorial: [ 
 			<a href="/smt/dl.php?file=examples/Demos/TouchColours/TouchColours.pde">
 				Download
-			</a>
+			</a> | 
+			<a href="/smt/examples/Demos/TouchColours/TouchColours.pde">
+				Direct Link
+			</a> ]
 		</h4>
 		<pre><code class="java"><?php
 			include $_SERVER['DOCUMENT_ROOT'].'/smt/examples/Demos/TouchColours/TouchColours.pde';

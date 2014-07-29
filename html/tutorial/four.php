@@ -137,8 +137,13 @@ void touchRstZoneF( Zone zone){
 			Once you have the touch information, you probably want to move the zone around. All matrix transformations are available with functions in the Zone class. The basic ones are: <code>Zone.rotate( float angle)</code>, <code>Zone.scale( float ratio)</code>, and <code>Zone.translate( float x, float y)</code>. Once again, check the javadoc or reference for more details.
 		</p>
 
-		<h4>Entire Source Code for Tutorial: 
-			<a href="/smt/dl.php?file=examples/Tutorial/Four/Four.pde">Download</a>
+		<h4>Entire Source Code for Tutorial: [ 
+			<a href="/smt/dl.php?file=examples/Tutorial/Four/Four.pde">
+				Download
+			</a> | 
+			<a href="/smt/examples/Tutorial/Four/Four.pde">
+				Direct Link
+			</a> ]
 		</h4>
 		<pre><code class="java"><?php
 			include $_SERVER['DOCUMENT_ROOT'].'/smt/examples/Tutorial/Four/Four.pde';

@@ -34,10 +34,13 @@
 			asdf
 		</p>
 
-		<h4>Entire Source Code for Tutorial: 
+		<h4>Entire Source Code for Tutorial: [ 
 			<a href="/smt/dl.php?file=examples/Advanced/Viewport/Viewport.pde">
 				Download
-			</a>
+			</a> | 
+			<a href="/smt/examples/Advanced/Viewport/Viewport.pde">
+				Direct Link
+			</a> ]
 		</h4>
 		<pre><code class="java"><?php
 			include $_SERVER['DOCUMENT_ROOT'].'/smt/examples/Advanced/Viewport/Viewport.pde';

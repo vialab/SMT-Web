@@ -62,8 +62,13 @@ grandchild.translate( 50, 50);</code></pre>
 			<a href="/smt/tutorial/four.php">Basics 4 - Touch Functions</a>
 		</p>
 
-		<h4>Entire Source Code for Tutorial: 
-			<a href="/smt/dl.php?file=examples/Tutorial/Three/Three.pde">Download</a>
+		<h4>Entire Source Code for Tutorial: [ 
+			<a href="/smt/dl.php?file=examples/Tutorial/Three/Three.pde">
+				Download
+			</a> | 
+			<a href="/smt/examples/Tutorial/Three/Three.pde">
+				Direct Link
+			</a> ]
 		</h4>
 		<pre><code class="java"><?php
 			include $_SERVER['DOCUMENT_ROOT'].'/smt/examples/Tutorial/Three/Three.pde';

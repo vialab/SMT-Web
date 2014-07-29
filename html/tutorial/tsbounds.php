@@ -106,10 +106,13 @@ SMT.setTouchSourceBoundsScreen( TouchSource.TUIO_DEVICE);</code></pre>
 			We've made a little sketch that might help with identifying the correct touch bindings for your touch devices. It comes packaged with the SMT library. You can find it in the processing IDE's examples viewer under <code>Contributed Libraries/Simple Multi-Toch (SMT)/Tests/Display</code>. Alternatively, you can download it directly from our website here: <a href="/smt/examples/Tests/Display.php">vialab.science.uoit.ca/smt/examples/Tests/Display.php</a> or our github repo here: <a href="https://github.com/vialab/SMT/blob/master/examples/Tests/Display/Display.pde">github.com/vialab/SMT/blob/master/examples/Tests/Display/Display</a>.pde. An older version that doesn't depend on the SMT library can be found here: <a href="https://github.com/kiwistrongis/processing-display-info">github.com/kiwistrongis/processing-display-info</a>.
 		</p>
 
-		<h4>Entire Source Code for Tutorial: 
+		<h4>Entire Source Code for Tutorial: [ 
 			<a href="/smt/dl.php?file=examples/Advanced/TouchSourceBounds/TouchSourceBounds.pde">
 				Download
-			</a>
+			</a> | 
+			<a href="/smt/examples/Advanced/TouchSourceBounds/TouchSourceBounds.pde">
+				Direct Link
+			</a> ]
 		</h4>
 		<pre><code class="java"><?php
 			include $_SERVER['DOCUMENT_ROOT'].'/smt/examples/Advanced/TouchSourceBounds/TouchSourceBounds.pde';

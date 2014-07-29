@@ -34,10 +34,13 @@
 			asdf
 		</p>
 
-		<h4>Entire Source Code for Tutorial: 
+		<h4>Entire Source Code for Tutorial: [ 
 			<a href="/smt/dl.php?file=examples/Demos/Keyboard/Keyboard.pde">
 				Download
-			</a>
+			</a> | 
+			<a href="/smt/examples/Demos/Keyboard/Keyboard.pde">
+				Direct Link
+			</a> ]
 		</h4>
 		<pre><code class="java"><?php
 			include $_SERVER['DOCUMENT_ROOT'].'/smt/examples/Demos/Keyboard/Keyboard.pde';

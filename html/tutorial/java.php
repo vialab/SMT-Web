@@ -218,13 +218,16 @@ void touchAnonyZone( Zone zone){
 		<img class="img-thumbnail" style="margin: 0 auto; display:block"
 			src="/smt/img/tutorial/java.png" alt="Java Tutorial Screenshot">
 
-		<h4>Entire Source Code for Tutorial: 
+		<h4>Entire Source Code for Tutorial: [ 
 			<a href="/smt/dl.php?file=examples/Advanced/Java/Java.pde">
 				Download
-			</a>
+			</a> | 
+			<a href="/smt/examples/Advanced/Java/Java.pde">
+				Direct Link
+			</a> ]
 		</h4>
 		<pre><code class="java"><?php
-			include $_SERVER['DOCUMENT_ROOT'].'examples/Advanced/Java/Java.pde';
+			include $_SERVER['DOCUMENT_ROOT'].'/smt/examples/Advanced/Java/Java.pde';
 		?></code></pre>
 	<!--End of this page's content-->
 	<?php
