@@ -25,10 +25,10 @@
 			This is a more advanced tutorial. It assumes that the reader knows basic processing and has read the introductory tutorials.
 		</p>
 		<p>
-			asdf
+			There are currently two keyboard zones included in SMT - <code>KeyboardZone</code> and <code>SwipeKeyboard</code>. <code>KeyboardZone</code> is older, uncustomizable, and not particularly aesthetically pleasing, but perhaps easier to use. <code>SwipeKeyboard</code> is an experimental, modular, prettier, but relatively complex alternative. This tutorial will walk through the basics of using <code>SwipeKeyboard</code> like a normal keyboard, and attempt to explain how to use the swipe functionality.
 		</p>
 
-		<h4>Setup</h4>
+		<h4>Basics</h4>
 <pre><code class="java">code();</code></pre>
 		<p>
 			asdf
@@ -36,11 +36,9 @@
 
 		<h4>Entire Source Code for Tutorial: [ 
 			<a href="/smt/dl.php?file=examples/Demos/Keyboard/Keyboard.pde">
-				Download
-			</a> | 
+				Download</a> | 
 			<a href="/smt/examples/Demos/Keyboard/Keyboard.pde">
-				Direct Link
-			</a> ]
+				Direct Link</a> ]
 		</h4>
 		<pre><code class="java"><?php
 			include $_SERVER['DOCUMENT_ROOT'].'/smt/examples/Demos/Keyboard/Keyboard.pde';
