@@ -29,6 +29,33 @@
 		</p>
 
 		<h4>Basics</h4>
+<pre><code class="java">	//keyboard
+	keyboard = new SwipeKeyboard();
+	keyboard.setLocation( 45, 300);
+	keyboard.addKeyListener( this);</code></pre>
+		<p>
+			asdf
+		</p>
+
+		<h4>Basics</h4>
+<pre><code class="java">code();</code></pre>
+		<p>
+			asdf
+		</p>
+
+		<h4>Basics</h4>
+<pre><code class="java">code();</code></pre>
+		<p>
+			asdf
+		</p>
+
+		<h4>Basics</h4>
+<pre><code class="java">code();</code></pre>
+		<p>
+			asdf
+		</p>
+
+		<h4>Basics</h4>
 <pre><code class="java">code();</code></pre>
 		<p>
 			asdf
