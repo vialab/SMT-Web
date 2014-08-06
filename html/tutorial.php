@@ -59,7 +59,7 @@
 			</h3>
 			<h3>
 				<a href="tutorial/swipekeyboard.php">
-					Introducing the Swipe Keyboard Zone [ In Progress ]
+					Introducing the Swipe Keyboard Zone
 				</a>
 			</h3>
 		</div>
