@@ -5,7 +5,7 @@
 		[ "download.php", "Download"],
 		[ "tutorial.php", "Tutorial"],
 		[ "examples.php", "Examples"],
-		#[ "reference.php", "Reference"],
+		[ "reference.php", "Reference"],
 		[ "javadoc/", "Javadoc"],
 		[ "contact.php", "Contact"]];
 	function navlist( $thisPage){
