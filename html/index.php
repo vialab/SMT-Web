@@ -39,7 +39,7 @@
 		<div class="row-fluid">
 			<div class="span6">
 				<h2>Stable Releases</h2>
-				<h4>SMT 4.1 [ <a href="https://github.com/vialab/SMT/releases/download/v4.1/SMT.zip">download</a> ] [ <a href="https://github.com/vialab/SMT/releases/tag/v4.1">release notes</a> ] ( Processing v2.1.1+ )</h4>
+				<h4>SMT 4.1 [ <a href="https://github.com/vialab/SMT/releases/download/v4.1/SMT-4.1.zip">download</a> ] [ <a href="https://github.com/vialab/SMT/releases/tag/v4.1">release notes</a> ] ( Processing v2.1.1+ )</h4>
 				<h4>SMT 3.8 [ <a href="https://github.com/vialab/SMT/releases/download/v3.8/SMT.zip">download</a> ] [ <a href="https://github.com/vialab/SMT/releases/tag/v3.8">release notes</a> ] ( Processing v2.1 )</h4>
 				<h3>Recent Pre-Releases</h3>
 				<h4>
