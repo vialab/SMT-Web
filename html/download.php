@@ -22,7 +22,7 @@
 		<p>
 			To install from a zip, simply extract the SMT folder from the zip into your processing libraries folder. If you don't know how to do that, we recommend downloading SMT with Processing's IDE instead ( see below ).
 		</p>
-		<h4>SMT 4.1 [ <a href="https://github.com/vialab/SMT/releases/download/v4.1/SMT-4.1.zip">download</a> ] [ <a href="https://github.com/vialab/SMT/releases/tag/v4.1">release notes</a> ] ( Processing v2.1.1+ )</h4>
+		<h4>SMT 4.2 [ <a href="https://github.com/vialab/SMT/releases/download/v4.2/SMT-4.2.zip">download</a> ] [ <a href="https://github.com/vialab/SMT/releases/tag/v4.2">release notes</a> ] ( Processing v2.1.1+ )</h4>
 		<h4 id="SMTv3.8">SMT 3.8 [ <a href="https://github.com/vialab/SMT/releases/download/v3.8/SMT.zip">download</a> ] [ <a href="https://github.com/vialab/SMT/releases/tag/v3.8">release notes</a> ] ( Processing v2.1 )</h4>
 		<p>
 			Older releases and pre-releases are archived here: <a href="https://github.com/vialab/SMT/releases">SMT Releases</a>
@@ -30,7 +30,7 @@
 		<h3>Recent Pre-Releases</h3>
 		<h4>
 			Beta: <a href="https://github.com/vialab/SMT/releases/tag/v4.1b3">v4.1b3</a>
-			Alpha: <a href="https://github.com/vialab/SMT/releases/tag/v4.1a4">v4.1a4</a>
+			Alpha: <a href="https://github.com/vialab/SMT/releases/tag/v4.2a1">v4.2a1</a>
 			Auto-Build: <a href="https://drone.io/github.com/vialab/SMT/latest">
 				<img src="https://drone.io/github.com/vialab/SMT/status.png" alt="Auto-Build Status"/>
 			</a>

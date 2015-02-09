@@ -13,6 +13,8 @@ export_dir = website
 version = 
 #warnings = -Xlint:-options
 warnings = 
+server_root = /srv/http
+smt_root = $(server_root)/smt
 
 #include files
 include dependencies.mk
@@ -62,12 +64,12 @@ $(export_dir)/javadoc: smt-repo/javadoc
 
 #push macros
 deploy-local:
-	sudo mkdir -p /var/www/html/smt/
-	sudo rm -rf /var/www/html/smt/*
-	sudo cp -r website/* /var/www/html/smt/
+	rm -rf $(smt_root)
+	cp -r website $(smt_root)
+	chmod -R og+rx $(smt_root)
 deploy-home:
-	ssh home-root "rm -rf /var/www/html/smt/"
-	scp -r website home-root:/var/www/html/smt
+	ssh home-root "rm -rf $(smt_root)"
+	scp -r website home-root:$(smt_root)
 deploy-vialab:
 	lftp \
 		-u $$(cat data/ftp_credentials.txt) \
