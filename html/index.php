@@ -58,6 +58,11 @@
 			<div class="span6">
 				<h2>News</h2>
 				<p>
+					<b>2014-10</b>
+					<br>
+					Kalev Kalda Sikes gave a tutorial on Simple Multi-Touch at SurfNet 2014 in Calgary, Alberta, Canada.
+				</p>
+				<p>
 					<b>2013-09</b>
 					<br>
 					Kalev Kalda Sikes was hired as a SurfNet intern. As part of this new role he has taken over SMT's maintenance and active development.
@@ -65,17 +70,17 @@
 				<p>
 					<b>2013-06</b>
 					<br>
-					Zach and Erik gave a tutorial on Simple Multi-Touch at SurfNet 2013 in Calgary, Alberta, Canada
+					Zach Cook and Erik Paluka gave a tutorial on Simple Multi-Touch at SurfNet 2013 in Calgary, Alberta, Canada.
 				</p>
 				<p>
 					<b>2013-04</b>
 					<br>
-					Simple Multi-Touch was accepted as an Official Contributed Library to Processing
+					Simple Multi-Touch was accepted as an Official Contributed Library to Processing.
 				</p>
 				<p>
 					<b>2012-09</b>
 					<br>
-					Zach and Erik gave a tutorial on Simple Multi-Touch at SurfNet 2012 in Kitchener, Ontario, Canada
+					Zach Cook and Erik Paluka gave a tutorial on Simple Multi-Touch at SurfNet 2012 in Kitchener, Ontario, Canada.
 				</p>
 			</div>
 		</div>
